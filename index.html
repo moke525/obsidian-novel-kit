@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Novel-kit · 为长篇写作服务的 Obsidian 套件</title>
+		<meta
+			name="description"
+			content="Novel-kit 是为长篇网文与小说写作打造的 Obsidian 一站式写作套件：一部作品就是一个文件夹，设定/大纲/正文全是明文 Markdown，七个视图看同一批笔记。"
+		/>
+		<link
+			rel="icon"
+			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230D9488'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EN%3C/text%3E%3C/svg%3E"
+		/>
+		<link rel="stylesheet" href="site/styles.css" />
+	</head>
+	<body>
+		<!-- ============ NAV ============ -->
+		<header class="nav" id="nav">
+			<div class="nav-inner">
+				<a class="brand" href="#top" aria-label="Novel-kit">
+					<span class="brand-mark">N</span>
+					<span class="brand-name">Novel-kit</span>
+				</a>
+				<nav class="nav-links" id="navLinks">
+					<a href="#features" data-i18n="nav.features">功能</a>
+					<a href="#highlight" data-i18n="nav.highlight">高亮</a>
+					<a href="#tools" data-i18n="nav.tools">创作工具</a>
+					<a href="#install" data-i18n="nav.install">安装</a>
+					<a href="#start" data-i18n="nav.start">快速开始</a>
+					<a href="#faq" data-i18n="nav.faq">常见问题</a>
+					<a href="#pricing" data-i18n="nav.pricing">定价</a>
+				</nav>
+				<div class="nav-actions">
+					<button class="icon-btn" id="langBtn" title="切换语言 / Switch language" aria-label="切换语言">中 / EN</button>
+					<button class="icon-btn" id="themeBtn" title="切换主题 / Toggle theme" aria-label="切换主题">
+						<span class="theme-icon">🌙</span>
+					</button>
+					<button class="icon-btn mobile-only" id="menuBtn" aria-label="菜单" aria-expanded="false">☰</button>
+				</div>
+			</div>
+		</header>
+
+		<!-- ============ HERO ============ -->
+		<section class="hero" id="top">
+			<div class="hero-bg" aria-hidden="true"></div>
+			<div class="hero-inner">
+				<div class="hero-copy">
+					<div class="badge"><span class="dot"></span><span data-i18n="hero.badge">Obsidian 插件 · 桌面优先</span></div>
+					<h1 data-i18n="hero.title">为长篇写作服务的<br />Obsidian 一站式套件</h1>
+					<p class="lead" data-i18n="hero.lead">一部作品就是库里的一个文件夹。设定、大纲、正文全是明文 Markdown——七个视图，看同一批笔记。</p>
+					<div class="hero-cta">
+						<a class="btn btn-primary" href="#install" data-i18n="hero.cta1">在 Obsidian 中安装</a>
+						<a class="btn btn-ghost" href="https://github.com/moke525/obsidian-novel-kit" target="_blank" rel="noopener" data-i18n="hero.cta2"
+							>查看 GitHub 仓库</a
+						>
+					</div>
+					<ul class="hero-points">
+						<li data-i18n="hero.p1">七个视图</li>
+						<li data-i18n="hero.p2">明文 Markdown</li>
+						<li data-i18n="hero.p3">完全离线</li>
+						<li data-i18n="hero.p4">桌面优先</li>
+					</ul>
+				</div>
+				<div class="hero-art" id="heroArt" aria-hidden="true"><!-- SVG injected by JS --></div>
+			</div>
+		</section>
+
+		<!-- ============ PRINCIPLE STRIP ============ -->
+		<section class="strip">
+			<div class="strip-inner">
+				<div class="strip-item"><span class="strip-k">①</span><span data-i18n="strip.1">一部作品 = 一个文件夹</span></div>
+				<div class="strip-item"><span class="strip-k">②</span><span data-i18n="strip.2">设定 / 大纲 / 正文 全是 Markdown</span></div>
+				<div class="strip-item"><span class="strip-k">③</span><span data-i18n="strip.3">七大视图看同一批笔记</span></div>
+				<div class="strip-item"><span class="strip-k">④</span><span data-i18n="strip.4">你的笔记，永远在你手里</span></div>
+			</div>
+		</section>
+
+		<!-- ============ FEATURES ============ -->
+		<section class="section" id="features">
+			<div class="section-head">
+				<h2 data-i18n="features.title">七大视图，一套笔记</h2>
+				<p data-i18n="features.sub">从宏观的世界观到微观的每一句话，Novel-kit 用七个相互联动的视图陪你写完一整本书。</p>
+			</div>
+			<div class="feature-grid" id="featureGrid"><!-- cards injected by JS --></div>
+		</section>
+
+		<!-- ============ CUSTOM HIGHLIGHT ============ -->
+		<section class="section" id="highlight">
+			<div class="section-head">
+				<h2 data-i18n="highlight.title">自定义高亮 · 你的 vault，你的风格</h2>
+				<p data-i18n="highlight.sub">
+					用 CSS 片段与三色自定义配色，把库调成顺眼的模样。墨 / 纸 / 强调色三个旋钮一改即生效，还能经 Style Settings
+					逐项微调——高亮、背景、链接，全听你的。
+				</p>
+			</div>
+			<div class="highlight-inner">
+				<ul class="check-list" id="highlightList">
+					<!-- injected -->
+				</ul>
+				<div class="highlight-art" id="highlightArt" aria-hidden="true"><!-- SVG --></div>
+			</div>
+		</section>
+
+		<!-- ============ TOOLS ============ -->
+		<section class="section section-alt" id="tools">
+			<div class="section-head">
+				<h2 data-i18n="tools.title">创作辅助工具</h2>
+				<p data-i18n="tools.sub">九个轻量但顺手的小工具，散落在写作流程的各个角落，帮你把灵感接住、把文字打磨干净。</p>
+			</div>
+			<div class="tool-grid" id="toolGrid"><!-- cards injected by JS --></div>
+		</section>
+
+		<!-- ============ INSTALL ============ -->
+		<section class="section section-alt" id="install">
+			<div class="section-head">
+				<h2 data-i18n="install.title">安装</h2>
+				<p data-i18n="install.sub">需要 Obsidian 1.8.7 或更高版本（仅桌面端）。</p>
+			</div>
+			<div class="install-grid" id="installGrid"><!-- injected --></div>
+		</section>
+
+		<!-- ============ QUICK START ============ -->
+		<section class="section" id="start">
+			<div class="section-head">
+				<h2 data-i18n="start.title">快速开始</h2>
+				<p data-i18n="start.sub">三步，从空文件夹到动笔。</p>
+			</div>
+			<ol class="steps" id="stepsList">
+				<!-- injected -->
+			</ol>
+		</section>
+
+		<!-- ============ FAQ ============ -->
+		<section class="section section-alt" id="faq">
+			<div class="section-head">
+				<h2 data-i18n="faq.title">常见问题</h2>
+				<p data-i18n="faq.sub">大多数「看不起来」的问题，都是这三件事之一。</p>
+			</div>
+			<div class="faq-list" id="faqList"><!-- injected --></div>
+		</section>
+
+		<!-- ============ PRIVACY ============ -->
+		<section class="section privacy">
+			<div class="privacy-inner">
+				<div class="privacy-copy">
+					<h2 data-i18n="privacy.title">数据 & 隐私</h2>
+					<p data-i18n="privacy.p1">设定、大纲与正文都是你自己 vault 里的 Markdown 笔记。插件只额外维护两份东西：</p>
+					<ul class="check-list">
+						<li>
+							<code>data.json</code> —
+							<span data-i18n="privacy.d1">作品列表、当前激活作品、全局设置。删掉会丢注册信息，碰不到任何笔记。</span>
+						</li>
+						<li>
+							<code>System/*.json</code> —
+							<span data-i18n="privacy.d2">视图布局、筛选规则、主页模板等。删掉只重置那一小块视图配置。</span>
+						</li>
+					</ul>
+					<p class="privacy-bold" data-i18n="privacy.p2">插件本身完全离线可用，不收集任何遥测，不上传你的笔记。</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ PRICING ============ -->
+		<section class="section section-alt" id="pricing">
+			<div class="section-head">
+				<h2 data-i18n="pricing.title">定价</h2>
+				<p data-i18n="pricing.sub">全部功能可免费试用 30 天（自首次打开小说面板起算），试用结束后需要授权码继续使用。</p>
+			</div>
+			<div class="pricing-grid">
+				<div class="pricing-card reveal">
+					<span class="pricing-name" data-i18n="pricing.halfYear">半年</span>
+					<span class="pricing-price">¥15</span>
+					<span class="pricing-period" data-i18n="pricing.d183">183 天</span>
+				</div>
+				<div class="pricing-card reveal">
+					<span class="pricing-name" data-i18n="pricing.yearly">一年</span>
+					<span class="pricing-price">¥27</span>
+					<span class="pricing-period" data-i18n="pricing.d365">365 天</span>
+				</div>
+				<div class="pricing-card pricing-card--best reveal">
+					<span class="pricing-badge" data-i18n="pricing.best">一次买断</span>
+					<span class="pricing-name" data-i18n="pricing.perpetual">永久</span>
+					<span class="pricing-price">¥60</span>
+					<span class="pricing-period" data-i18n="pricing.lifetime">不限时长</span>
+				</div>
+			</div>
+			<p class="pricing-note" data-i18n="pricing.note">授权一机一码；按天档续费可叠加时长。安装后在插件设置的「授权」页输入授权码即可激活。</p>
+		</section>
+
+		<!-- ============ CONTACT ============ -->
+		<section class="section" id="contact">
+			<div class="section-head">
+				<h2 data-i18n="contact.title">联系我们</h2>
+				<p data-i18n="contact.sub">购买授权码、换机转移、反馈问题，都可以通过下面的方式找到我们。</p>
+			</div>
+			<!-- TODO: 以下 QQ 群号与微信号是占位，发布前替换为实际号码 -->
+			<div class="contact-grid">
+				<div class="contact-card reveal">
+					<span class="contact-label" data-i18n="contact.qqLabel">QQ 群</span>
+					<span class="contact-value">431076635</span>
+				</div>
+				<div class="contact-card reveal">
+					<span class="contact-label" data-i18n="contact.wechatLabel">微信</span>
+					<span class="contact-value">mtztm525</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ FOOTER ============ -->
+		<footer class="footer">
+			<div class="footer-inner">
+				<div class="footer-col footer-brand">
+					<span class="brand-mark">N</span>
+					<span class="brand-name">Novel-kit</span>
+					<p data-i18n="footer.tag">为长篇写作服务的 Obsidian 套件</p>
+					<p class="footer-license">Apache-2.0 License</p>
+				</div>
+				<div class="footer-col">
+					<h4 data-i18n="footer.project">项目</h4>
+					<a href="https://github.com/moke525/obsidian-novel-kit" target="_blank" rel="noopener">GitHub</a>
+					<a href="https://github.com/moke525/obsidian-novel-kit/issues" target="_blank" rel="noopener" data-i18n="footer.issues">提交问题</a>
+					<a href="https://github.com/moke525/obsidian-novel-kit/releases" target="_blank" rel="noopener" data-i18n="footer.releases">版本发布</a>
+				</div>
+				<div class="footer-col">
+					<h4 data-i18n="footer.thanks">致谢（开源组件）</h4>
+					<span class="foot-libs">three.js · Chart.js · 3d-force-graph · MiniSearch · jsdiff · relation-graph · CC-CEDICT</span>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<span>© <span id="year"></span> Novel-kit</span>
+				<span data-i18n="footer.built">用 ✍️ 与代码写就，祝你写作愉快。</span>
+			</div>
+		</footer>
+
+		<script src="site/app.js"></script>
+	</body>
+</html>
