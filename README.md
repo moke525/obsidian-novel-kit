@@ -1,10 +1,10 @@
-<a id="中文"></a>
+<a id="english"></a>
 
 <div align="center">
 
 # ✍️ Novel-kit
 
-**中文** | **[English](README.en.md)**
+**[中文](README-CN.md)** | **English**
 
 [![Obsidian plugin](https://img.shields.io/badge/Obsidian-plugin-7C3AED?logo=obsidian&logoColor=white)](https://community.obsidian.md/plugins/novel-kit)
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcommunity.obsidian.md%2Fapi%2Fv1%2Fplugins%2Fnovel-kit&query=%24.downloads&label=downloads&logo=obsidian&logoColor=white&color=7C3AED)](https://community.obsidian.md/plugins/novel-kit)
@@ -12,227 +12,225 @@
 [![Minimum Obsidian version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmoke525%2Fobsidian-novel-kit%2Fmain%2Fmanifest.json&query=%24.minAppVersion&label=min%20Obsidian&color=blue)](manifest.json)
 [![License](https://img.shields.io/github/license/moke525/obsidian-novel-kit)](LICENSE)
 
-为长篇网文与小说写作打造的 Obsidian 一站式写作套件。<br />
-一部作品就是库里的一个文件夹 · 设定 / 大纲 / 正文全是明文 Markdown · 七个视图看同一批笔记。
+An all-in-one writing suite for long-form web novels in Obsidian.<br />
+One work is one folder in your vault · Settings, outlines and manuscripts are all plain Markdown · Seven views over the same notes.
 
 <br />
 
-<a href="docs/reference.zh-CN.md"><kbd>📖 完整参考</kbd></a>
-<a href="docs/reference.zh-CN.md#常见问题"><kbd>❓ 常见问题</kbd></a>
+<a href="docs/reference.en.md"><kbd>📖 Full Reference</kbd></a>
+<a href="docs/reference.en.md#troubleshooting"><kbd>❓ FAQ</kbd></a>
 
 <br />
 
 <br />
 
-<img width="100%" alt="创作主页" src="assets/home.png" />
+<img width="100%" alt="Creative homepage" src="assets/home.png" />
 
 </div>
 
 > [!IMPORTANT]
-> **本插件基于桌面版开发，仅支持桌面端。**
+> **This plugin is built for the desktop version — desktop only.**
 
 <br />
 
-## ✨ 功能一览
+## ✨ Feature Highlights
 
-### 🏠 创作主页
-<sub>进度与 KPI · 每日码字曲线与热力图 · 词频 · 待办 · 时钟 · 组件可拖动增删，布局写进作品的 System/home.json</sub>
+### 🏠 Creative Homepage
+<sub>Progress & KPIs · Daily word-count curve and heatmap · Word frequency · Todos · Clock · Drag to add or remove widgets, layout saved to System/home.json</sub>
 
-<img width="100%" alt="创作主页" src="assets/home.png" />
+<img width="100%" alt="Creative homepage" src="assets/home.png" />
 
-### 🕸️ 关系图
-<sub>关系与伏笔 / 钩子的可视化 · 「筛选」管哪些文件显示与特殊样式 · 「显示配置」管文件类型、配色与连线</sub>
+### 🕸️ Graph
+<sub>Visualizes relations plus foreshadowing / hooks · "Filter" decides what shows and what gets highlighted · "Display config" handles file types, colors and edges</sub>
 
-<img width="100%" alt="关系图" src="assets/graph.png" />
+<img width="100%" alt="Graph" src="assets/graph.png" />
 
-### 📅 时间线
-<sub>按时间排场景 · 分组选「文件夹」时拖动会真的移动文件 · 起止日期直接改 frontmatter</sub>
+### 📅 Timeline
+<sub>Scenes ordered by time · With "Folder" grouping, dragging really moves files · Edit start/end dates straight in the frontmatter</sub>
 
-<img width="100%" alt="时间线" src="assets/timeline.png" />
+<img width="100%" alt="Timeline" src="assets/timeline.png" />
 
-### 🧬 裂变
-<sub>多列卡片大纲 · 拖动调整情节顺序 · 卡片就是笔记，改的是同一份文件 · 右键改事件类型（时代 / 场景 / 章节 / 情节）</sub>
+### 🧬 Fission
+<sub>Multi-column card outline · Drag to reorder plot beats · Cards *are* the notes — you are editing the same files · Right-click to retag the event kind (era / scene / chapter / plot)</sub>
 
-<img width="100%" alt="裂变" src="assets/fission.png" />
+<img width="100%" alt="Fission" src="assets/fission.png" />
 
-### 🗺️ 地图与时空
-<sub>底图打坐标标记 · 时空把地图当平面、时间当 z 轴 · 坐标写成「地图名：x，y」（全角冒号与逗号）</sub>
+### 🗺️ Map & Spacetime
+<sub>Coordinate markers on a base image · Spacetime maps the image to a plane and time to the z axis · Coordinates read "map name：x，y" (full-width colon and comma)</sub>
 
-<img width="100%" alt="地图与时空" src="assets/spaceTime.png" />
+<img width="100%" alt="Map and Spacetime" src="assets/spaceTime.png" />
 
-### 🃏 卡片与表格
-<sub>卡片是可配置的字段墙 · 表格能分组、过滤、钉列、就地改字段 · 两者都支持拖拽排序与跨组拖拽</sub>
+### 🃏 Cards & Table
+<sub>Cards form a configurable field wall · Table supports grouping, filtering, pinning columns and in-place editing · Both support drag ordering and cross-group drag</sub>
 
-<img width="100%" alt="卡片与表格" src="assets/card.png" />
+<img width="100%" alt="Cards and Table" src="assets/card.png" />
 
-### 🧵 伏笔 · 钩子 · 剧情 · 正文
-<sub>主操作全在正文里：框选句子 → 右键 → 埋设 / 回收，状态一路走 未埋设 → 已埋设 → 已关联 → 已回收</sub>
+### 🧵 Foreshadowing · Hooks · Plot · Manuscript
+<sub>The main operation happens in the prose: select a sentence → right click → plant or resolve; state walks through Unplanted → Planted → Linked → Resolved</sub>
 
-<img width="100%" alt="伏笔与钩子" src="assets/foreshadowing.png" />
+<img width="100%" alt="Foreshadowing and hooks" src="assets/foreshadowing.png" />
 
-### 📝 创作辅助工具
+### 📝 Creative Assistants
 
 <table>
 <tr>
-<td width="33%" align="center" valign="top"><img width="100%" alt="灵感卡片" src="assets/inspiration.png" /><br /><b>灵感卡片</b><br /><sub>可直接拖进关系图 / 时间线 / 裂变变成情节</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="词条" src="assets/glossary.png" /><br /><b>词条</b><br /><sub>设定速查，按层级组织</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="词频" src="assets/wordfreq.png" /><br /><b>词频</b><br /><sub>统计正文用词，看出偏好与重复</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Inspiration cards" src="assets/inspiration.png" /><br /><b>Inspiration Cards</b><br /><sub>Drag into graph / timeline / fission to become plot beats</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Glossary" src="assets/glossary.png" /><br /><b>Glossary</b><br /><sub>Quick lore lookup, organized in layers</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Word frequency" src="assets/wordfreq.png" /><br /><b>Word Frequency</b><br /><sub>See your habits and repeats at a glance</sub></td>
 </tr>
 <tr>
-<td width="33%" align="center" valign="top"><img width="100%" alt="校对" src="assets/proofread.png" /><br /><b>校对</b><br /><sub>就地检查，逐条确认修改</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="码字目标" src="assets/writing-goal.png" /><br /><b>码字目标</b><br /><sub>每日目标与进度提醒</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="取名" src="assets/naming.png" /><br /><b>取名</b><br /><sub>按风格生成角色与地名</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Proofreading" src="assets/proofread.png" /><br /><b>Proofreading</b><br /><sub>In-place checks, confirm each fix</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Writing goal" src="assets/writing-goal.png" /><br /><b>Writing Goal</b><br /><sub>Daily targets and progress nudges</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Naming" src="assets/naming.png" /><br /><b>Naming</b><br /><sub>Generate character and place names by style</sub></td>
 </tr>
 <tr>
-<td width="33%" align="center" valign="top"><img width="100%" alt="文件模板" src="assets/file-template.png" /><br /><b>文件模板</b><br /><sub>按「目标文件夹 + 文件名格式」自动套模板并重命名</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="历史快照" src="assets/snapshot.png" /><br /><b>历史快照</b><br /><sub>自动存档，恢复前能左右对比</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="悬浮便签" src="assets/sticky-note.png" /><br /><b>悬浮便签</b><br /><sub>随手记，自动保存</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="File templates" src="assets/file-template.png" /><br /><b>File Templates</b><br /><sub>Auto-apply a template and rename by "target folder + filename pattern"</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Snapshots" src="assets/snapshot.png" /><br /><b>History Snapshots</b><br /><sub>Auto-archived, side-by-side diff before restoring</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Sticky notes" src="assets/sticky-note.png" /><br /><b>Sticky Notes</b><br /><sub>Jot things down, auto-saved</sub></td>
 </tr>
 </table>
 
-### 🖥️ 桌面端
+### 🖥️ Desktop
 
-**本插件仅支持桌面端**：全部功能按桌面交互设计（manifest 已声明 `isDesktopOnly`）。
+**This plugin is desktop only**: every feature is designed around desktop interactions (the manifest declares `isDesktopOnly`).
 
-## 📥 安装
+## 📥 Installation
 
-| 方式 | 步骤 |
+| Method | Steps |
 |:-----|:-----|
-| **社区插件市场** *(推荐)* | 设置 → 第三方插件 → 浏览 → 搜索 `novel-kit` → 安装并启用 |
-| **手动安装** | 把 `main.js`、`manifest.json`、`styles.css` 放进 `<你的 vault>/.obsidian/plugins/novel-kit/`，再在设置里启用 |
+| **Community plugins** *(recommended)* | Settings → Community plugins → Browse → search `novel-kit` → install and enable |
+| **Manual** | Put `main.js`, `manifest.json` and `styles.css` into `<your vault>/.obsidian/plugins/novel-kit/`, then enable it |
 
-需要 Obsidian 1.8.7 或更高版本；**仅桌面端**（插件用到了 Node / Electron API）。
+Requires Obsidian 1.8.7 or later; **desktop only** (the plugin uses Node / Electron APIs).
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-1. **注册一部作品**：打开创作主页点「新增作品」，或运行命令「注册小说工作区」。文件夹里会自动铺好 `设定/`、`事件/`、`正文/`、`灵感/`、`System/`。
-2. **先看示例**（可选）：库里一部作品都没有时，创作面板顶部会出现 **「加载示例」**，写入一部《残虹夜雨》——1 个时代（北境乱世）、3 个场景与 6 段大纲、4 篇成稿、14 条线索（8 条已回收、6 条刻意不回收用来演示筛选）、一张「北境」地图与四处坐标、4 张灵感卡片、2 张悬浮便签，外加两份中文说明书。跟着导览走一遍最快。
-3. **开始写**：在 `正文/` 下写稿，框选句子埋伏笔与钩子；需要看全局时再打开小说创作面板（Ribbon 书本图标）。
+1. **Register a work**: open the creative homepage and click "New work", or run the command "Register novel workspace". The folders `设定/`, `事件/`, `正文/`, `灵感/` and `System/` are created for you.
+2. **Try the sample** (optional): when no work exists yet, the panel top shows **"Load sample"**, which writes *《残虹夜雨》* — 1 era (北境乱世), 3 scenes and 6 outline sections, 4 manuscript chapters, 14 clues (8 resolved, 6 deliberately left open to demo filtering), one "北境" map with four coordinates, 4 inspiration cards, 2 sticky notes, plus two Chinese walkthrough notes. Following the tour is the fastest way in.
+3. **Start writing**: draft under `正文/`, select sentences to plant foreshadowing and hooks; open the main panel (book icon in the ribbon) when you want the whole picture.
 
 <details>
-<summary><kbd>🎯 主要命令</kbd></summary>
+<summary><kbd>🎯 Key Commands</kbd></summary>
 
 <br />
 
-| 命令 | 说明 |
+| Command | Description |
 |:-----|:-----|
-| 注册小说工作区 | 把库里的某个文件夹登记为一部作品 |
-| 切换激活作品 | 在已注册的作品之间切换 |
-| 打开小说创作面板 | 打开七个视图所在的主面板 |
-| 打开创作主页 | 打开仪表盘主页 |
-| 加载示例 | 写入示例作品《残虹夜雨》 |
-| 新建伏笔 / 回收伏笔 | 在正文选区上埋设与回收 |
-| 切换写作模式 | 桌面端：打字机居中滚动 |
+| Register novel workspace | Register a folder in your vault as a work |
+| Switch active work | Move between registered works |
+| Open novel panel | Open the main panel with all seven views |
+| Open creative homepage | Open the dashboard homepage |
+| Load sample | Write the sample work 《残虹夜雨》 |
+| New / Resolve foreshadowing | Plant and resolve on the current selection |
+| Toggle writing mode | Desktop: typewriter scrolling |
 
-完整清单见 [参考手册的命令部分](docs/reference.zh-CN.md#命令清单)。
+See the [commands section of the reference](docs/reference.en.md#commands).
 
 </details>
 
 <details>
-<summary><kbd>⚙️ 主要设置</kbd></summary>
+<summary><kbd>⚙️ Key Settings</kbd></summary>
 
 <br />
 
-| 设置 | 默认值 | 说明 |
+| Setting | Default | Description |
 |:-----|:-------|:-----|
-| 默认视图 | 关系图 | 打开创作面板时先看哪个视图 |
-| 视图布局 | 按视口 | 宽屏用多层分栏；窄屏用单列 + 页签 |
-| 词频停用词 | 内置 | 统计词频时忽略的词 |
-| 自动快照 | 开 | 是否自动为笔记存档 |
-| CSS 片段 | 关 | 桌面端：把自定义样式注入库 |
+| Default view | Graph | Which view opens first in the panel |
+| View layout | By viewport | Multi-column on wide screens; single column + tabs on narrow screens |
+| Stop words | Built-in | Words ignored by word-frequency counting |
+| Auto snapshot | On | Whether notes are archived automatically |
+| CSS snippets | Off | Desktop: inject custom styles into the vault |
 
-完整设置项见 [参考手册的设置部分](docs/reference.zh-CN.md#插件设置)。
+See the [settings section of the reference](docs/reference.en.md#settings).
 
 </details>
 
-## ❓ 常见问题
+## ❓ FAQ
 
-一部作品看不起来，通常是这三件事：**没注册作品**（先「新增作品」）、**创作面板顶部没选中它**、或者 **`正文/` 路径不对**（要在已注册作品的 `正文/` 下写作）。
+If a work won't open, it's usually one of three things: **it isn't registered** (click "New work" first), **it isn't selected at the top of the panel**, or **the `正文/` path is wrong** (write under the `正文/` of a registered work).
 
-关系图里找不到笔记，默认是因为「仅显示有关联」把没有关系的节点藏了起来——关掉该选项，或给它加一条关联；整类不显示则去工具栏的「筛选」或「显示配置」勾选文件类型。
+Notes missing from the graph is usually "Only show connected" hiding nodes with no relations — turn that off, or add a relation; if a whole category is missing, tick its file type under "Filter" or "Display config" in the toolbar.
 
-地图上看不到标记，检查笔记里的坐标写成「地图名：x，y」（**冒号与逗号都是全角**），且地图的显示类型包含 `locale`。时间线改了没生效，直接去改笔记 frontmatter 里的「开始」「结束」。
+Markers missing on the map: check that coordinates read "map name：x，y" (**full-width colon and comma**) and that the map's enabled types include `locale`. If a timeline edit doesn't stick, change the "开始" / "结束" fields directly in the note's frontmatter.
 
-字数与今日进度对不上，多半是主页统计的是**当前作品工作区**里的正文，先确认选中了正确的作品再刷新。
+Word counts not adding up usually means the homepage counts manuscripts in the **currently active work** — confirm the right work is selected, then refresh.
 
-更多问答见 [参考手册的常见问题](docs/reference.zh-CN.md#常见问题)。
+More Q&A in the [reference FAQ](docs/reference.en.md#troubleshooting).
 
-## 💾 数据
+## 💾 Data
 
-设定、大纲与正文都是你自己 vault 里的 Markdown 笔记。插件只额外维护两份东西：
+Settings, outlines and manuscripts are all Markdown notes in your vault. The plugin only maintains two extra things:
 
-- **插件 `data.json`**（`.obsidian/plugins/novel-kit/data.json`）：作品列表、当前激活作品、全局设置。删掉会丢掉注册信息与设置，**碰不到任何笔记**。
-- **作品 `System/*.json`**：视图布局、筛选规则、主页模板、待办、悬浮便签等。删掉其中一份只重置那一小块视图配置。
+- **Plugin `data.json`** (`.obsidian/plugins/novel-kit/data.json`): the work list, the active work, and global settings. Deleting it loses registrations and settings and **touches no notes**.
+- **Per-work `System/*.json`**: view layouts, filter rules, homepage templates, todos, sticky notes. Deleting one only resets that slice of view configuration.
 
-## 🌐 网络使用
+## 🌐 Network use
 
-**插件本身完全离线可用**，不收集任何遥测数据，不上传你的笔记。只有下面两个功能会在你主动触发时联网，除此之外没有任何后台请求：
+**The plugin works fully offline**, collects no telemetry, and never uploads your notes. Only the two features below reach the network, and only when you trigger them yourself — there are no background requests:
 
-| 功能 | 何时联网 | 访问的服务 |
-|:-----|:---------|:-----------|
-| 词频 / 校对的分词词典 | 在设置里点「下载」某个词典时 | `cdn.jsdelivr.net`（jieba 词典）、`www.mdbg.net`（CC-CEDICT） |
-| 主页的网页表格组件 | 你填入网址并点「获取」时 | 你填的那个网址本身 |
+| Feature | When it goes online | Service it contacts |
+|:--------|:--------------------|:--------------------|
+| Word-frequency / proofreading dictionaries | When you click "Download" for a dictionary in settings | `cdn.jsdelivr.net` (jieba dictionaries), `www.mdbg.net` (CC-CEDICT) |
+| Homepage web-table widget | When you enter a URL and click "Fetch" | The URL you entered |
 
-两者都只**下载**数据到本地（词典存进 `.obsidian/plugins/novel-kit/word-freq-dicts/`），不会把你的内容发出去。不下载词典也能用词频功能——只有内置停用词表可用，分词精度会低一些。
+Both only **download** data to your machine (dictionaries are saved to `.obsidian/plugins/novel-kit/word-freq-dicts/`); nothing of yours is sent out. Word frequency still works without downloading a dictionary — only the built-in stop-word list is available and segmentation is less accurate.
 
-## ⚖️ 合规披露
+## ⚖️ Disclosures
 
-- **不收集遥测**：没有任何客户端遥测，也没有任何后台联网请求（联网只发生在上一节的两种情形）。
-- **开源**：完整源码见本仓库，以 [Apache-2.0 License](LICENSE) 发布。
+- **No telemetry**: there is no client-side telemetry and no background network requests (network use is limited to the two cases in the previous section).
+- **Open source**: the full source is in this repository, released under the [Apache-2.0 License](LICENSE).
 
-## 🛠️ 开发
+## 🛠️ Development
 
-需要 Node.js 18 或更高版本。`npm install` 后用 `npm run dev` 开发（产物写入 `test-vault/.obsidian/plugins/novel-kit/`），`npm run build` 出生产包到 `build/`。
+Requires Node.js 18 or later. `npm install`, then `npm run dev` to develop (output goes to `test-vault/.obsidian/plugins/novel-kit/`), and `npm run build` for a production bundle in `build/`.
 
-改动之后跑一遍：
+After making changes:
 
 ```bash
-npm test              # vitest：主页模板 / 示例数据 / 样式规约
-npm run check         # svelte-check 类型检查
-npm run visual:check  # 视觉回归（需先 npm run build）
+npm test              # vitest: homepage templates / sample data / style rules
+npm run check         # svelte-check type checking
+npm run visual:check  # visual regression (run npm run build first)
 npm run lint          # Biome
 ```
 
-入口在 `src/main.ts`，每个功能模块各占 `src/features/<名>/` 一个文件夹（`manager.ts` + `appView.ts` + `settings.ts`），其中只有 `css-snippets` 与 `export` 是桌面专属。详见 [参考手册的开发说明](docs/reference.zh-CN.md#开发说明)。
+The entry point is `src/main.ts`; each feature lives in its own `src/features/<name>/` folder (`manager.ts` + `appView.ts` + `settings.ts`), and only `css-snippets` and `export` are desktop-only. See the [reference's development notes](docs/reference.en.md#development).
 
 <br />
 
 <div align="center">
 
-## 📄 许可证 & 💬 反馈
+## 📄 License & 💬 Feedback
 
 [Apache-2.0 License](LICENSE) · [NOTICE](NOTICE)
 
-### 第三方组件
+### Third-party components
 
-本插件打包并使用了下列开源项目，在此致谢（按各自许可证要求保留版权声明）：
+This plugin bundles and uses the following open-source projects, with thanks (copyright notices retained as their licences require):
 
-| 组件 | 许可证 | 版权 |
-|:-----|:-------|:-----|
+| Component | Licence | Copyright |
+|:----------|:--------|:----------|
 | [three.js](https://github.com/mrdoob/three.js) | MIT | © 2010–2024 three.js authors |
 | [Chart.js](https://github.com/chartjs/Chart.js) | MIT | © 2014–2024 Chart.js Contributors |
 | [3d-force-graph](https://github.com/vasturiano/3d-force-graph) | MIT | © Vasco Asturiano |
 | [MiniSearch](https://github.com/lucaong/minisearch) | MIT | © Luca Ongaro |
 | [jsdiff](https://github.com/kpdecker/jsdiff) | BSD-3-Clause | © 2009–2015 Kevin Decker &lt;kpdecker@gmail.com&gt; |
 | [relation-graph](https://github.com/seeksdream/relation-graph) | MIT | © seeksdream |
-| [CC-CEDICT](https://cc-cedict.org/) | CC BY-SA 4.0 | © CC-CEDICT project（词典由用户按需下载，不打包） |
+| [CC-CEDICT](https://cc-cedict.org/) | CC BY-SA 4.0 | © CC-CEDICT project (downloaded on demand, not bundled) |
 
-⭐ Star · 🐛 [提交问题](https://github.com/moke525/obsidian-novel-kit/issues)
+⭐ Star · 🐛 [Issues](https://github.com/moke525/obsidian-novel-kit/issues)
 
 <br />
 
-## 💗 支持 / Support
-
-如果你喜欢这个插件，并愿意支持作者继续努力更新，你可以在这里请作者喝一杯奶茶！
+## 💗 Support
 
 If you like this plugin and want to support the author to keep updating, you can buy the author a bubble tea here!
 
-| 微信 / WeChat Pay | 支付宝 / Alipay |
+| WeChat Pay | Alipay |
 |:---:|:---:|
-| <img src="assets/wechat-pay.png" width="220" alt="微信支付收款码" /> | <img src="assets/ali-pay.png" width="220" alt="支付宝收款码" /> |
+| <img src="assets/wechat-pay.png" width="220" alt="WeChat Pay QR code" /> | <img src="assets/ali-pay.png" width="220" alt="Alipay QR code" /> |
 
 <br />
 
-**祝你写作愉快！** ✍️
+**Happy writing!** ✍️
 
 </div>
