@@ -24,13 +24,12 @@
 
 <br />
 
-<img width="100%" alt="创作主页" src="assets/home.gif" />
+<img width="100%" alt="创作主页" src="assets/home.png" />
 
 </div>
 
 > [!IMPORTANT]
-> **本插件基于桌面版开发，建议在桌面端使用。**
-> 移动端只做了基础适配——能打开、能读、能改，但排版密度与交互（拖拽、右键菜单、多面板并排）都是按桌面设计的，手机上体验会明显打折。
+> **本插件基于桌面版开发，仅支持桌面端。**
 
 <br />
 
@@ -39,75 +38,61 @@
 ### 🏠 创作主页
 <sub>进度与 KPI · 每日码字曲线与热力图 · 词频 · 待办 · 时钟 · 组件可拖动增删，布局写进作品的 System/home.json</sub>
 
-<img width="100%" alt="创作主页" src="assets/home.gif" />
+<img width="100%" alt="创作主页" src="assets/home.png" />
 
 ### 🕸️ 关系图
 <sub>关系与伏笔 / 钩子的可视化 · 「筛选」管哪些文件显示与特殊样式 · 「显示配置」管文件类型、配色与连线</sub>
 
-<img width="100%" alt="关系图" src="assets/graph.gif" />
+<img width="100%" alt="关系图" src="assets/graph.png" />
 
 ### 📅 时间线
 <sub>按时间排场景 · 分组选「文件夹」时拖动会真的移动文件 · 起止日期直接改 frontmatter</sub>
 
-<img width="100%" alt="时间线" src="assets/timeline.gif" />
+<img width="100%" alt="时间线" src="assets/timeline.png" />
 
 ### 🧬 裂变
 <sub>多列卡片大纲 · 拖动调整情节顺序 · 卡片就是笔记，改的是同一份文件 · 右键改事件类型（时代 / 场景 / 章节 / 情节）</sub>
 
-<img width="100%" alt="裂变" src="assets/fission.gif" />
+<img width="100%" alt="裂变" src="assets/fission.png" />
 
 ### 🗺️ 地图与时空
 <sub>底图打坐标标记 · 时空把地图当平面、时间当 z 轴 · 坐标写成「地图名：x，y」（全角冒号与逗号）</sub>
 
-<img width="100%" alt="地图与时空" src="assets/map-spacetime.gif" />
+<img width="100%" alt="地图与时空" src="assets/spaceTime.png" />
 
 ### 🃏 卡片与表格
 <sub>卡片是可配置的字段墙 · 表格能分组、过滤、钉列、就地改字段 · 两者都支持拖拽排序与跨组拖拽</sub>
 
-<img width="100%" alt="卡片与表格" src="assets/cards-table.gif" />
+<img width="100%" alt="卡片与表格" src="assets/card.png" />
 
 ### 🧵 伏笔 · 钩子 · 剧情 · 正文
 <sub>主操作全在正文里：框选句子 → 右键 → 埋设 / 回收，状态一路走 未埋设 → 已埋设 → 已关联 → 已回收</sub>
 
-<img width="100%" alt="伏笔与钩子" src="assets/foreshadowing.gif" />
-
-### 📱 移动端（基础适配）
-<sub>桌面端是主战场；移动端只保证可用：主页切单列 + 网格 + 页签、模板编辑器左侧栏收成抽屉、关系图 / 时间线的检查器浮在画布上</sub>
-<sub>未针对触屏重做交互——拖拽、右键菜单、多面板这类桌面习惯在手机上会不太顺手</sub>
-
-<img width="100%" alt="移动端" src="assets/mobile.gif" />
+<img width="100%" alt="伏笔与钩子" src="assets/foreshadowing.png" />
 
 ### 📝 创作辅助工具
 
 <table>
 <tr>
-<td width="33%" align="center" valign="top"><img width="100%" alt="灵感卡片" src="assets/inspiration.gif" /><br /><b>灵感卡片</b><br /><sub>可直接拖进关系图 / 时间线 / 裂变变成情节</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="词条" src="assets/glossary.gif" /><br /><b>词条</b><br /><sub>设定速查，按层级组织</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="词频" src="assets/wordfreq.gif" /><br /><b>词频</b><br /><sub>统计正文用词，看出偏好与重复</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="灵感卡片" src="assets/inspiration.png" /><br /><b>灵感卡片</b><br /><sub>可直接拖进关系图 / 时间线 / 裂变变成情节</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="词条" src="assets/glossary.png" /><br /><b>词条</b><br /><sub>设定速查，按层级组织</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="词频" src="assets/wordfreq.png" /><br /><b>词频</b><br /><sub>统计正文用词，看出偏好与重复</sub></td>
 </tr>
 <tr>
-<td width="33%" align="center" valign="top"><img width="100%" alt="校对" src="assets/proofread.gif" /><br /><b>校对</b><br /><sub>就地检查，逐条确认修改</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="码字目标" src="assets/writing-goal.gif" /><br /><b>码字目标</b><br /><sub>每日目标与进度提醒</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="取名" src="assets/naming.gif" /><br /><b>取名</b><br /><sub>按风格生成角色与地名</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="校对" src="assets/proofread.png" /><br /><b>校对</b><br /><sub>就地检查，逐条确认修改</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="码字目标" src="assets/writing-goal.png" /><br /><b>码字目标</b><br /><sub>每日目标与进度提醒</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="取名" src="assets/naming.png" /><br /><b>取名</b><br /><sub>按风格生成角色与地名</sub></td>
 </tr>
 <tr>
-<td width="33%" align="center" valign="top"><img width="100%" alt="文件模板" src="assets/file-template.gif" /><br /><b>文件模板</b><br /><sub>按「目标文件夹 + 文件名格式」自动套模板并重命名</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="历史快照" src="assets/snapshot.gif" /><br /><b>历史快照</b><br /><sub>自动存档，恢复前能左右对比</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="悬浮便签" src="assets/sticky-note.gif" /><br /><b>悬浮便签</b><br /><sub>随手记，自动保存</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="文件模板" src="assets/file-template.png" /><br /><b>文件模板</b><br /><sub>按「目标文件夹 + 文件名格式」自动套模板并重命名</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="历史快照" src="assets/snapshot.png" /><br /><b>历史快照</b><br /><sub>自动存档，恢复前能左右对比</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="悬浮便签" src="assets/sticky-note.png" /><br /><b>悬浮便签</b><br /><sub>随手记，自动保存</sub></td>
 </tr>
 </table>
 
-### 🖥️ 桌面端 · 📱 移动端
+### 🖥️ 桌面端
 
-**推荐在桌面端使用**：全部功能按桌面交互设计，移动端只做了基础适配（见页首说明）。
-
-| 🖥️ 桌面端 | 📱 移动端（基础适配） |
-|:---|:---|
-| **全部功能可用** | 单列主页 + 自适应网格 + 页签 |
-| **CSS 片段**：把自定义样式注入库 | 模板编辑器左侧栏收成抽屉 |
-| **写作模式**：打字机，光标行保持居中 | 检查器浮到画布之上，不挤占画布 |
-| 鼠标拖拽、右键菜单、多面板并排 | CSS 片段 / 写作模式**整体不注册**（依赖 Electron） |
-| 鼠标拖拽、右键菜单、多面板并排 | 触屏交互未重做，拖拽与右键操作体验受限 |
+**本插件仅支持桌面端**：全部功能按桌面交互设计（manifest 已声明 `isDesktopOnly`）。
 
 ## 📥 安装
 
@@ -151,7 +136,7 @@
 | 设置 | 默认值 | 说明 |
 |:-----|:-------|:-----|
 | 默认视图 | 关系图 | 打开创作面板时先看哪个视图 |
-| 视图布局 | 按设备 | 宽屏用多层分栏；移动端用单列 + 页签 |
+| 视图布局 | 按视口 | 宽屏用多层分栏；窄屏用单列 + 页签 |
 | 词频停用词 | 内置 | 统计词频时忽略的词 |
 | 自动快照 | 开 | 是否自动为笔记存档 |
 | CSS 片段 | 关 | 桌面端：把自定义样式注入库 |
@@ -192,8 +177,6 @@
 
 ## ⚖️ 合规披露
 
-- **部分功能需要付费授权**：本插件可**免费试用 30 天**（从首次打开小说面板算起），之后需要购买授权码才能继续使用完整功能。授权**一机一码**，换机器需要重新购买；价格与购买入口在插件设置的「授权」页。
-- **会读写 vault 之外的一个文件**：桌面端把授权状态（授权码、到期时间、试用起点）存在本机用户目录的 `novel-kit/license.json` —— Windows 为 `%APPDATA%\novel-kit\license.json`，macOS 为 `~/Library/Application Support/novel-kit/license.json`，Linux 为 `$XDG_CONFIG_HOME/novel-kit/license.json`（未设置时为 `~/.config/novel-kit/license.json`）。这样做是为了**换库 / 新建 vault 时不用重新授权**。文件内容经过加密，不含任何笔记内容。移动端读不到库外路径，会自动回落到库内的 `data.json`。
 - **不收集遥测**：没有任何客户端遥测，也没有任何后台联网请求（联网只发生在上一节的两种情形）。
 - **开源**：完整源码见本仓库，以 [Apache-2.0 License](LICENSE) 发布。
 
@@ -235,6 +218,18 @@ npm run lint          # Biome
 | [CC-CEDICT](https://cc-cedict.org/) | CC BY-SA 4.0 | © CC-CEDICT project（词典由用户按需下载，不打包） |
 
 ⭐ Star · 🐛 [提交问题](https://github.com/moke525/obsidian-novel-kit/issues)
+
+<br />
+
+## 💗 支持 / Support
+
+如果你喜欢这个插件，并愿意支持作者继续努力更新，你可以在这里请作者喝一杯奶茶！
+
+If you like this plugin and want to support the author to keep updating, you can buy the author a bubble tea here!
+
+| 微信 / WeChat Pay | 支付宝 / Alipay |
+|:---:|:---:|
+| <img src="assets/wechat-pay.png" width="220" alt="微信支付收款码" /> | <img src="assets/ali-pay.png" width="220" alt="支付宝收款码" /> |
 
 <br />
 

@@ -24,14 +24,12 @@ One work is one folder in your vault · Settings, outlines and manuscripts are a
 
 <br />
 
-<img width="100%" alt="Creative homepage" src="assets/home_en.gif" />
+<img width="100%" alt="Creative homepage" src="assets/home.png" />
 
 </div>
 
 > [!IMPORTANT]
-> **This plugin is built for the desktop version — using it on desktop is recommended.**
-> Mobile support is basic adaptation only: it opens, reads and edits, but layout density and interactions
-> (dragging, context menus, side-by-side panels) are designed for desktop, so the phone experience is noticeably worse.
+> **This plugin is built for the desktop version — desktop only.**
 
 <br />
 
@@ -40,76 +38,61 @@ One work is one folder in your vault · Settings, outlines and manuscripts are a
 ### 🏠 Creative Homepage
 <sub>Progress & KPIs · Daily word-count curve and heatmap · Word frequency · Todos · Clock · Drag to add or remove widgets, layout saved to System/home.json</sub>
 
-<img width="100%" alt="Creative homepage" src="assets/home_en.gif" />
+<img width="100%" alt="Creative homepage" src="assets/home.png" />
 
 ### 🕸️ Graph
 <sub>Visualizes relations plus foreshadowing / hooks · "Filter" decides what shows and what gets highlighted · "Display config" handles file types, colors and edges</sub>
 
-<img width="100%" alt="Graph" src="assets/graph_en.gif" />
+<img width="100%" alt="Graph" src="assets/graph.png" />
 
 ### 📅 Timeline
 <sub>Scenes ordered by time · With "Folder" grouping, dragging really moves files · Edit start/end dates straight in the frontmatter</sub>
 
-<img width="100%" alt="Timeline" src="assets/timeline_en.gif" />
+<img width="100%" alt="Timeline" src="assets/timeline.png" />
 
 ### 🧬 Fission
 <sub>Multi-column card outline · Drag to reorder plot beats · Cards *are* the notes — you are editing the same files · Right-click to retag the event kind (era / scene / chapter / plot)</sub>
 
-<img width="100%" alt="Fission" src="assets/fission_en.gif" />
+<img width="100%" alt="Fission" src="assets/fission.png" />
 
 ### 🗺️ Map & Spacetime
 <sub>Coordinate markers on a base image · Spacetime maps the image to a plane and time to the z axis · Coordinates read "map name：x，y" (full-width colon and comma)</sub>
 
-<img width="100%" alt="Map and Spacetime" src="assets/map-spacetime_en.gif" />
+<img width="100%" alt="Map and Spacetime" src="assets/spaceTime.png" />
 
 ### 🃏 Cards & Table
 <sub>Cards form a configurable field wall · Table supports grouping, filtering, pinning columns and in-place editing · Both support drag ordering and cross-group drag</sub>
 
-<img width="100%" alt="Cards and Table" src="assets/cards-table_en.gif" />
+<img width="100%" alt="Cards and Table" src="assets/card.png" />
 
 ### 🧵 Foreshadowing · Hooks · Plot · Manuscript
 <sub>The main operation happens in the prose: select a sentence → right click → plant or resolve; state walks through Unplanted → Planted → Linked → Resolved</sub>
 
-<img width="100%" alt="Foreshadowing and hooks" src="assets/foreshadowing_en.gif" />
-
-### 📱 Mobile (basic adaptation)
-<sub>Desktop is the main target; mobile is only kept usable: homepage switches to single column + grid + tabs, template editor side panel collapses into a drawer, graph / timeline inspectors float above the canvas</sub>
-<sub>Touch interactions were not redesigned — dragging, context menus and multi-panel workflows are desktop habits and feel awkward on a phone</sub>
-
-<img width="100%" alt="Mobile" src="assets/mobile_en.gif" />
+<img width="100%" alt="Foreshadowing and hooks" src="assets/foreshadowing.png" />
 
 ### 📝 Creative Assistants
 
 <table>
 <tr>
-<td width="33%" align="center" valign="top"><img width="100%" alt="Inspiration cards" src="assets/inspiration_en.gif" /><br /><b>Inspiration Cards</b><br /><sub>Drag into graph / timeline / fission to become plot beats</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="Glossary" src="assets/glossary_en.gif" /><br /><b>Glossary</b><br /><sub>Quick lore lookup, organized in layers</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="Word frequency" src="assets/wordfreq_en.gif" /><br /><b>Word Frequency</b><br /><sub>See your habits and repeats at a glance</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Inspiration cards" src="assets/inspiration.png" /><br /><b>Inspiration Cards</b><br /><sub>Drag into graph / timeline / fission to become plot beats</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Glossary" src="assets/glossary.png" /><br /><b>Glossary</b><br /><sub>Quick lore lookup, organized in layers</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Word frequency" src="assets/wordfreq.png" /><br /><b>Word Frequency</b><br /><sub>See your habits and repeats at a glance</sub></td>
 </tr>
 <tr>
-<td width="33%" align="center" valign="top"><img width="100%" alt="Proofreading" src="assets/proofread_en.gif" /><br /><b>Proofreading</b><br /><sub>In-place checks, confirm each fix</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="Writing goal" src="assets/writing-goal_en.gif" /><br /><b>Writing Goal</b><br /><sub>Daily targets and progress nudges</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="Naming" src="assets/naming_en.gif" /><br /><b>Naming</b><br /><sub>Generate character and place names by style</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Proofreading" src="assets/proofread.png" /><br /><b>Proofreading</b><br /><sub>In-place checks, confirm each fix</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Writing goal" src="assets/writing-goal.png" /><br /><b>Writing Goal</b><br /><sub>Daily targets and progress nudges</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Naming" src="assets/naming.png" /><br /><b>Naming</b><br /><sub>Generate character and place names by style</sub></td>
 </tr>
 <tr>
-<td width="33%" align="center" valign="top"><img width="100%" alt="File templates" src="assets/file-template_en.gif" /><br /><b>File Templates</b><br /><sub>Auto-apply a template and rename by "target folder + filename pattern"</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="Snapshots" src="assets/snapshot_en.gif" /><br /><b>History Snapshots</b><br /><sub>Auto-archived, side-by-side diff before restoring</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="Sticky notes" src="assets/sticky-note_en.gif" /><br /><b>Sticky Notes</b><br /><sub>Jot things down, auto-saved</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="File templates" src="assets/file-template.png" /><br /><b>File Templates</b><br /><sub>Auto-apply a template and rename by "target folder + filename pattern"</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Snapshots" src="assets/snapshot.png" /><br /><b>History Snapshots</b><br /><sub>Auto-archived, side-by-side diff before restoring</sub></td>
+<td width="33%" align="center" valign="top"><img width="100%" alt="Sticky notes" src="assets/sticky-note.png" /><br /><b>Sticky Notes</b><br /><sub>Jot things down, auto-saved</sub></td>
 </tr>
 </table>
 
-### 🖥️ Desktop · 📱 Mobile
+### 🖥️ Desktop
 
-**Using it on desktop is recommended**: every feature is designed around desktop interactions, and mobile is
-basic adaptation only (see the note at the top of this file).
-
-| 🖥️ Desktop | 📱 Mobile (basic adaptation) |
-|:---|:---|
-| **All features available** | Single-column homepage + responsive grid + tabs |
-| **CSS Snippets**: inject custom styles into your vault | Template editor side panel becomes a drawer |
-| **Writing Mode**: typewriter, keeps the cursor line centered | Inspectors float above the canvas |
-| Mouse drag, context menus, side-by-side panels | CSS Snippets / Writing Mode are **not registered at all** (they need Electron) |
-| Mouse dragging, context menus, side-by-side panels | Touch interactions were not redesigned; dragging and right-click flows are limited |
+**This plugin is desktop only**: every feature is designed around desktop interactions (the manifest declares `isDesktopOnly`).
 
 ## 📥 Installation
 
@@ -153,7 +136,7 @@ See the [commands section of the reference](docs/reference.en.md#commands).
 | Setting | Default | Description |
 |:-----|:-------|:-----|
 | Default view | Graph | Which view opens first in the panel |
-| View layout | By device | Multi-column on wide screens; single column + tabs on mobile |
+| View layout | By viewport | Multi-column on wide screens; single column + tabs on narrow screens |
 | Stop words | Built-in | Words ignored by word-frequency counting |
 | Auto snapshot | On | Whether notes are archived automatically |
 | CSS snippets | Off | Desktop: inject custom styles into the vault |
@@ -194,8 +177,6 @@ Both only **download** data to your machine (dictionaries are saved to `.obsidia
 
 ## ⚖️ Disclosures
 
-- **Some features require a paid licence**: the plugin has a **30-day free trial** (counted from the first time you open the novel panel), after which a licence key is required to keep using the full feature set. Licences are **bound to one machine**, so switching machines requires a new purchase; pricing and checkout are in the plugin's "Licence" settings page.
-- **One file outside your vault is read and written**: on desktop the licence state (key, expiry, trial start) is stored in `novel-kit/license.json` under your user directory — `%APPDATA%\novel-kit\license.json` on Windows, `~/Library/Application Support/novel-kit/license.json` on macOS, and `$XDG_CONFIG_HOME/novel-kit/license.json` on Linux (`~/.config/novel-kit/license.json` when unset). This is what lets you **switch vaults or create a new vault without re-activating**. The file is encrypted and contains nothing from your notes. On mobile, the out-of-vault path is unavailable, so the plugin falls back to `data.json` inside the vault.
 - **No telemetry**: there is no client-side telemetry and no background network requests (network use is limited to the two cases in the previous section).
 - **Open source**: the full source is in this repository, released under the [Apache-2.0 License](LICENSE).
 
@@ -237,6 +218,16 @@ This plugin bundles and uses the following open-source projects, with thanks (co
 | [CC-CEDICT](https://cc-cedict.org/) | CC BY-SA 4.0 | © CC-CEDICT project (downloaded on demand, not bundled) |
 
 ⭐ Star · 🐛 [Issues](https://github.com/moke525/obsidian-novel-kit/issues)
+
+<br />
+
+## 💗 Support
+
+If you like this plugin and want to support the author to keep updating, you can buy the author a bubble tea here!
+
+| WeChat Pay | Alipay |
+|:---:|:---:|
+| <img src="assets/wechat-pay.png" width="220" alt="WeChat Pay QR code" /> | <img src="assets/ali-pay.png" width="220" alt="Alipay QR code" /> |
 
 <br />
 

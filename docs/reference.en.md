@@ -1,9 +1,9 @@
 # Novel-kit complete reference
 
 > [!IMPORTANT]
-> **This plugin is built for the desktop version; using it on desktop is recommended.** Mobile support is basic adaptation only (see [Mobile](#mobile)).
+> **This plugin is built for the desktop version — desktop only.**
 
-This is the long form of the [README](../README.en.md). The README gets you started; this page holds the **full lists**: entry points, views, settings, mobile behaviour, storage locations and troubleshooting.
+This is the long form of the [README](../README.en.md). The README gets you started; this page holds the **full lists**: entry points, views, settings, storage locations and troubleshooting.
 
 [中文](reference.zh-CN.md)
 
@@ -19,13 +19,12 @@ This is the long form of the [README](../README.en.md). The README gets you star
 6. [Sidebars and writing aids](#sidebars-and-writing-aids)
 7. [Vault-wide features](#vault-wide-features)
 8. [Shared lore groups](#shared-lore-groups)
-9. [Mobile](#mobile)
-10. [Settings](#settings)
-11. [Suggested workflow](#suggested-workflow)
-12. [Troubleshooting](#troubleshooting)
-13. [Where your data lives](#where-your-data-lives)
-14. [Network use](#network-use)
-15. [Development](#development)
+9. [Settings](#settings)
+10. [Suggested workflow](#suggested-workflow)
+11. [Troubleshooting](#troubleshooting)
+12. [Where your data lives](#where-your-data-lives)
+13. [Network use](#network-use)
+14. [Development](#development)
 
 ---
 
@@ -130,9 +129,9 @@ On first run one of them is activated according to your device, and **both ship 
 | Template | For | Structure |
 | --- | --- | --- |
 | **Default layout** | Wide screens | Nested splitPanels: top / middle / bottom bands plus left / right panes |
-| **Mobile layout** | Phones / narrow screens | Single-column list scroll + auto-fit grid + tabs folding the data area, no splitPanel |
+| **Narrow layout** | Narrow screens | Single-column list scroll + auto-fit grid + tabs folding the data area, no splitPanel |
 
-The mobile layout avoids splitPanels because on a 390px screen a 72/28 split leaves the right pane a few dozen pixels wide, and every chart collapses into a vertical line.
+The narrow layout avoids splitPanels because on a 390px screen a 72/28 split leaves the right pane a few dozen pixels wide, and every chart collapses into a vertical line.
 
 ---
 
@@ -224,32 +223,13 @@ Vault-wide ordering: Chinese numerals, natural numbers, custom word order.
 
 ### Advanced search / JSON Studio / CSS snippets
 
-Full-text search and replace; tree-edit your `System/*.json`; manage `.obsidian/snippets`. CSS snippets depend on desktop capabilities and are not shown on mobile.
+Full-text search and replace; tree-edit your `System/*.json`; manage `.obsidian/snippets`. CSS snippets depend on desktop capabilities.
 
 ---
 
 ## Shared lore groups
 
 **Settings → Novel writing → Shared lore groups**: several works share one world view, referencing lore read-only (plus optional eras / scenes). Shared files never leave the source vault, carry a shared badge in views, and are protected from accidental edits.
-
----
-
-## Mobile
-
-**This plugin is developed for the desktop version; using it on desktop is recommended.** Mobile support is
-basic adaptation only — it will open, read and edit fine, but layout density and interactions (dragging,
-context menus, side-by-side panels) are designed for desktop and will feel cramped on a phone.
-The table below lists what has been adapted on mobile; it is not a promise of full feature parity.
-
-| Case | Behaviour |
-| --- | --- |
-| **CSS snippets, export** | Depend on Electron and printing; their settings tabs and entries do not appear at all (export is **additionally hidden** right now, code kept) |
-| **Home layout** | The **mobile layout** is activated automatically on first run (single column + auto-fit grid + tabs); you can switch back to the wide one by hand |
-| **Home / cards template editors** | The left sidebar becomes an overlay drawer, collapsed by default, pulled in and out from the title bar |
-| **Graph / timeline / spacetime inspectors** | Float over the canvas on narrow screens and dock to an edge, instead of eating canvas width |
-| **Advanced search** | Docks to the right sidebar (the left sidebar is the drawer-style main navigation and would be pushed away) |
-| **Glossary config panel** | Drops its anchor on narrow screens and centres on the screen |
-| **Glossary / marks / inspiration / plot / ledger** | Single-column layouts, usable as they are |
 
 ---
 
@@ -348,14 +328,6 @@ Inspiration → drag into graph / timeline / fission → fill in fields → gene
 - **Focus writing does not centre.**  
   Turn on **focus writing** and make sure you are in editing mode, not preview.
 
-### Mobile
-
-- **Two settings tabs are missing on my phone.**  
-  CSS snippets and export depend on desktop capabilities and are not registered at all on mobile; export is also hidden on desktop right now. This is intended.
-
-- **The home page looks squeezed on my phone.**  
-  Make sure the **mobile layout** is the active template; you can also drag a narrow-screen variant out of the default layout on desktop.
-
 If none of that helps: hit refresh in the novel panel, or run *Rebuild current work's node graph* from the command palette, and check that sync has not rolled back anything under `System/`.
 
 ---
@@ -398,7 +370,7 @@ novel · wordcount · naming-kit · json-studio · vault-search · phone-preview
 file-tree-sort · css-snippets · export · snapshot · typewriter
 ```
 
-Only `css-snippets` and `export` are **desktop-only**: guarded by `Platform.isDesktop`, and absent from the mobile settings tabs. `export` is currently **hidden altogether** (code kept).
+Only `css-snippets` and `export` are **desktop-only** (guarded by `Platform.isDesktop`). `export` is currently **hidden altogether** (code kept).
 
 `file-templates` is mounted as a settings module and called when files are created or scaffolds are written.
 

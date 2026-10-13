@@ -29,7 +29,6 @@
 					<a href="#install" data-i18n="nav.install">安装</a>
 					<a href="#start" data-i18n="nav.start">快速开始</a>
 					<a href="#faq" data-i18n="nav.faq">常见问题</a>
-					<a href="#pricing" data-i18n="nav.pricing">定价</a>
 				</nav>
 				<div class="nav-actions">
 					<button class="icon-btn" id="langBtn" title="切换语言 / Switch language" aria-label="切换语言">中 / EN</button>
@@ -62,7 +61,17 @@
 						<li data-i18n="hero.p4">桌面优先</li>
 					</ul>
 				</div>
-				<div class="hero-art" id="heroArt" aria-hidden="true"><!-- SVG injected by JS --></div>
+				<div class="hero-art" id="heroArt">
+					<img
+						src="assets/home.png"
+						alt="时空视图截图"
+						width="1520"
+						height="1048"
+						fetchpriority="high"
+						data-i18n-alt="hero.artAlt"
+						onerror="nkShotFallback(this)"
+					/>
+				</div>
 			</div>
 		</section>
 
@@ -161,38 +170,11 @@
 			</div>
 		</section>
 
-		<!-- ============ PRICING ============ -->
-		<section class="section section-alt" id="pricing">
-			<div class="section-head">
-				<h2 data-i18n="pricing.title">定价</h2>
-				<p data-i18n="pricing.sub">全部功能可免费试用 30 天（自首次打开小说面板起算），试用结束后需要授权码继续使用。</p>
-			</div>
-			<div class="pricing-grid">
-				<div class="pricing-card reveal">
-					<span class="pricing-name" data-i18n="pricing.halfYear">半年</span>
-					<span class="pricing-price">¥15</span>
-					<span class="pricing-period" data-i18n="pricing.d183">183 天</span>
-				</div>
-				<div class="pricing-card reveal">
-					<span class="pricing-name" data-i18n="pricing.yearly">一年</span>
-					<span class="pricing-price">¥27</span>
-					<span class="pricing-period" data-i18n="pricing.d365">365 天</span>
-				</div>
-				<div class="pricing-card pricing-card--best reveal">
-					<span class="pricing-badge" data-i18n="pricing.best">一次买断</span>
-					<span class="pricing-name" data-i18n="pricing.perpetual">永久</span>
-					<span class="pricing-price">¥60</span>
-					<span class="pricing-period" data-i18n="pricing.lifetime">不限时长</span>
-				</div>
-			</div>
-			<p class="pricing-note" data-i18n="pricing.note">授权一机一码；按天档续费可叠加时长。安装后在插件设置的「授权」页输入授权码即可激活。</p>
-		</section>
-
 		<!-- ============ CONTACT ============ -->
 		<section class="section" id="contact">
 			<div class="section-head">
 				<h2 data-i18n="contact.title">联系我们</h2>
-				<p data-i18n="contact.sub">购买授权码、换机转移、反馈问题，都可以通过下面的方式找到我们。</p>
+				<p data-i18n="contact.sub">使用问题、功能建议或反馈，都可以通过下面的方式找到我们。</p>
 			</div>
 			<!-- TODO: 以下 QQ 群号与微信号是占位，发布前替换为实际号码 -->
 			<div class="contact-grid">
@@ -204,6 +186,25 @@
 					<span class="contact-label" data-i18n="contact.wechatLabel">微信</span>
 					<span class="contact-value">mtztm525</span>
 				</div>
+			</div>
+		</section>
+
+		<!-- ============ SUPPORT ============ -->
+		<section class="section" id="support">
+			<div class="section-head">
+				<h2 data-i18n="support.title">💗 支持 / Support</h2>
+				<p data-i18n="support.sub">如果你喜欢这个插件，并愿意支持作者继续努力更新，你可以在这里请作者喝一杯奶茶！</p>
+				<p data-i18n="support.subEn">If you like this plugin and want to support the author to keep updating, you can buy the author a bubble tea here!</p>
+			</div>
+			<div class="support-grid">
+				<figure class="support-card reveal">
+					<img src="assets/wechat-pay.png" alt="微信支付收款码" width="220" height="221" loading="lazy" />
+					<figcaption data-i18n="support.payLabel">微信 / WeChat Pay</figcaption>
+				</figure>
+				<figure class="support-card reveal">
+					<img src="assets/ali-pay.png" alt="支付宝收款码" width="220" height="220" loading="lazy" />
+					<figcaption data-i18n="support.tipLabel">支付宝 / Alipay</figcaption>
+				</figure>
 			</div>
 		</section>
 

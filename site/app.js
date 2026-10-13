@@ -31,7 +31,6 @@
 			'nav.install': '安装',
 			'nav.start': '快速开始',
 			'nav.faq': '常见问题',
-			'nav.pricing': '定价',
 			'hero.badge': 'Obsidian 插件 · 桌面优先',
 			'hero.title': '为长篇写作服务的<br/>Obsidian 一站式套件',
 			'hero.lead': '一部作品就是库里的一个文件夹。设定、大纲、正文全是明文 Markdown——七个联动的视图，加一套随你自定义的配色与高亮，陪你写完一整本书。',
@@ -41,7 +40,9 @@
 			'hero.p2': '明文 Markdown',
 			'hero.p3': '完全离线',
 			'hero.p4': '桌面优先',
+			'hero.artAlt': '截图：时空视图以地图为平面、时间为竖轴查看事件轨迹',
 			'nav.highlight': '高亮',
+			'highlight.artAlt': '截图：CSS 片段列表面板与新建 snippet 弹窗',
 			'highlight.title': '自定义高亮 · 你的 vault，你的风格',
 			'highlight.sub':
 				'用 CSS 片段与三色自定义配色，把库调成顺眼的模样。墨 / 纸 / 强调色三个旋钮一改即生效，还能经 Style Settings 逐项微调——高亮、背景、链接，全听你的。',
@@ -70,20 +71,15 @@
 			'footer.project': '项目',
 			'footer.thanks': '致谢（开源组件）',
 			'footer.built': '用 ✍️ 与代码写就，祝你写作愉快。',
-			'pricing.title': '定价',
-			'pricing.sub': '全部功能可免费试用 30 天（自首次打开小说面板起算），试用结束后需要授权码继续使用。',
-			'pricing.halfYear': '半年',
-			'pricing.yearly': '一年',
-			'pricing.perpetual': '永久',
-			'pricing.d183': '183 天',
-			'pricing.d365': '365 天',
-			'pricing.lifetime': '不限时长',
-			'pricing.best': '一次买断',
-			'pricing.note': '授权一机一码；按天档续费可叠加时长。安装后在插件设置的「授权」页输入授权码即可激活。',
 			'contact.title': '联系我们',
-			'contact.sub': '购买授权码、换机转移、反馈问题，都可以通过下面的方式找到我们。',
+			'contact.sub': '使用问题、功能建议或反馈，都可以通过下面的方式找到我们。',
 			'contact.qqLabel': 'QQ 群',
 			'contact.wechatLabel': '微信',
+			'support.title': '💗 支持 / Support',
+			'support.sub': '如果你喜欢这个插件，并愿意支持作者继续努力更新，你可以在这里请作者喝一杯奶茶！',
+			'support.subEn': 'If you like this plugin and want to support the author to keep updating, you can buy the author a bubble tea here!',
+			'support.payLabel': '微信 / WeChat Pay',
+			'support.tipLabel': '支付宝 / Alipay',
 		},
 		en: {
 			'nav.features': 'Features',
@@ -91,7 +87,6 @@
 			'nav.install': 'Install',
 			'nav.start': 'Get started',
 			'nav.faq': 'FAQ',
-			'nav.pricing': 'Pricing',
 			'hero.badge': 'Obsidian plugin · Desktop-first',
 			'hero.title': 'An all-in-one Obsidian toolkit<br/>for long-form writing',
 			'hero.lead':
@@ -102,7 +97,9 @@
 			'hero.p2': 'Plain Markdown',
 			'hero.p3': 'Fully offline',
 			'hero.p4': 'Desktop-first',
+			'hero.artAlt': 'Screenshot: the Spacetime view plots events with the map as plane and time as the vertical axis',
 			'nav.highlight': 'Highlight',
+			'highlight.artAlt': 'Screenshot: the CSS snippets panel and the new-snippet dialog',
 			'highlight.title': 'Custom highlighting · your vault, your style',
 			'highlight.sub':
 				'Use CSS snippets and a 3-color palette to make the vault feel like yours. Three knobs — ink / paper / accent — apply instantly, and every variable can be fine-tuned via Style Settings.',
@@ -131,20 +128,15 @@
 			'footer.project': 'Project',
 			'footer.thanks': 'Thanks (open source)',
 			'footer.built': 'Written with ✍️ and code. Happy writing!',
-			'pricing.title': 'Pricing',
-			'pricing.sub': 'Every feature is free to try for 30 days (counted from the first time you open the novel panel); a licence key is required afterwards.',
-			'pricing.halfYear': 'Half year',
-			'pricing.yearly': 'Yearly',
-			'pricing.perpetual': 'Lifetime',
-			'pricing.d183': '183 days',
-			'pricing.d365': '365 days',
-			'pricing.lifetime': 'No time limit',
-			'pricing.best': 'One-time purchase',
-			'pricing.note': 'One licence per machine; day-based plans stack. After installing, enter your licence key on the “Licence” page in the plugin settings.',
 			'contact.title': 'Contact us',
-			'contact.sub': 'Buy a licence, transfer to a new machine, or report issues — reach us through either channel below.',
+			'contact.sub': 'For questions, suggestions, or feedback, reach us through either channel below.',
 			'contact.qqLabel': 'QQ group',
 			'contact.wechatLabel': 'WeChat',
+			'support.title': '💗 Support',
+			'support.sub': '如果你喜欢这个插件，并愿意支持作者继续努力更新，你可以在这里请作者喝一杯奶茶！',
+			'support.subEn': 'If you like this plugin and want to support the author to keep updating, you can buy the author a bubble tea here!',
+			'support.payLabel': 'WeChat Pay',
+			'support.tipLabel': 'Alipay',
 		},
 	}
 
@@ -153,6 +145,7 @@
 		{
 			icon: '🏠',
 			mock: 'home',
+			shots: ['assets/home.png'],
 			zh: { t: '创作主页', en: 'Home', d: '进度与 KPI、每日码字曲线与热力图、词频、待办、时钟。组件可拖拽增删，布局写进作品的 System/home.json。' },
 			en: {
 				t: 'Home dashboard',
@@ -163,6 +156,7 @@
 		{
 			icon: '🕸️',
 			mock: 'graph',
+			shots: ['assets/graph.png'],
 			zh: { t: '关系图', en: 'Relations', d: '关系与伏笔 / 钩子的可视化。「筛选」管哪些文件显示与特殊样式，「显示配置」管文件类型、配色与连线。' },
 			en: {
 				t: 'Relation graph',
@@ -173,6 +167,7 @@
 		{
 			icon: '📅',
 			mock: 'timeline',
+			shots: ['assets/timeline.png'],
 			zh: { t: '时间线', en: 'Timeline', d: '按时间排场景；分组选「文件夹」时拖动会真的移动文件；起止日期直接改 frontmatter。' },
 			en: {
 				t: 'Timeline',
@@ -183,6 +178,7 @@
 		{
 			icon: '🧬',
 			mock: 'fission',
+			shots: ['assets/fission.png'],
 			zh: { t: '裂变', en: 'Fission', d: '多列卡片大纲；拖动调整情节顺序；卡片就是笔记，改的是同一份文件；右键改事件类型（时代 / 场景 / 章节 / 情节）。' },
 			en: {
 				t: 'Fission outline',
@@ -193,6 +189,7 @@
 		{
 			icon: '🗺️',
 			mock: 'map',
+			shots: ['assets/map.png', 'assets/spaceTime.png'],
 			zh: { t: '地图与时空', en: 'Map & Spacetime', d: '底图打坐标标记；时空把地图当平面、时间当 z 轴；坐标写成「地图名：x，y」（全角冒号与逗号）。' },
 			en: {
 				t: 'Map & Spacetime',
@@ -203,6 +200,7 @@
 		{
 			icon: '🃏',
 			mock: 'cards',
+			shots: ['assets/card.png', 'assets/table.png'],
 			zh: { t: '卡片与表格', en: 'Cards & Tables', d: '卡片是可配置的字段墙；表格能分组、过滤、钉列、就地改字段；两者都支持拖拽排序与跨组拖拽。' },
 			en: {
 				t: 'Cards & Tables',
@@ -213,6 +211,7 @@
 		{
 			icon: '🧵',
 			mock: 'foreshadow',
+			shots: ['assets/伏笔.png'],
 			zh: {
 				t: '伏笔 · 钩子 · 剧情 · 正文',
 				en: 'Foreshadowing',
@@ -743,6 +742,14 @@
 		return o[currentLang] || o.zh
 	}
 
+	function esc(s) {
+		return String(s)
+			.replace(/&/g, '&amp;')
+			.replace(/"/g, '&quot;')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;')
+	}
+
 	function renderStatic() {
 		var nodes = document.querySelectorAll('[data-i18n]')
 		nodes.forEach(function (n) {
@@ -750,6 +757,23 @@
 			var val = (DICT[currentLang] && DICT[currentLang][key]) || DICT.zh[key] || ''
 			n.innerHTML = val
 		})
+		var altNodes = document.querySelectorAll('[data-i18n-alt]')
+		altNodes.forEach(function (n) {
+			var key = n.getAttribute('data-i18n-alt')
+			var val = (DICT[currentLang] && DICT[currentLang][key]) || DICT.zh[key] || ''
+			n.setAttribute('alt', val)
+		})
+	}
+
+	/* 截图优先；图片加载失败时由 nkShotFallback 回退到 SVG 示意 */
+	function mockInner(f, t) {
+		if (!f.shots || !f.shots.length) return mockSVG(f.mock)
+		var imgs = f.shots
+			.map(function (src) {
+				return '<img class="feature-shot" src="' + src + '" alt="' + esc(t.t) + ' 截图" loading="lazy" onerror="nkShotFallback(this)" />'
+			})
+			.join('')
+		return '<div class="feature-shots">' + imgs + '</div>'
 	}
 
 	function renderFeatures() {
@@ -770,8 +794,10 @@
 				'<p class="feature-desc">' +
 				t.d +
 				'</p>' +
-				'<div class="feature-mock">' +
-				mockSVG(f.mock) +
+				'<div class="feature-mock" data-mock="' +
+				f.mock +
+				'">' +
+				mockInner(f, t) +
 				'</div>' +
 				'</article>'
 			)
@@ -803,7 +829,24 @@
 				return '<li>' + x + '</li>'
 			})
 			.join('')
-		document.getElementById('highlightArt').innerHTML = mockHighlightSVG()
+		// 自定义高亮区用两张真截图（CSS 片段列表面板 + 新建 snippet 弹窗）；加载失败回退 SVG 示意
+		var art = document.getElementById('highlightArt')
+		var shots = ['assets/css0.png', 'assets/css1.png']
+		art.setAttribute('data-mock', 'highlight')
+		art.setAttribute('data-fallback', '')
+		art.removeAttribute('aria-hidden')
+		art.innerHTML =
+			'<div class="highlight-shots">' +
+			shots
+				.map(function (src) {
+					return (
+						'<img class="highlight-shot" src="' +
+						src +
+						'" alt="CSS 片段截图" data-i18n-alt="highlight.artAlt" loading="lazy" onerror="nkShotFallback(this)" />'
+					)
+				})
+				.join('') +
+			'</div>'
 	}
 
 	function renderInstall() {
@@ -910,6 +953,24 @@
 		if (icon) icon.textContent = t === 'dark' ? '🌙' : '☀️'
 	}
 
+	/* ---------- 截图加载失败 → 回退 SVG 示意 ---------- */
+	function nkShotFallback(img) {
+		var host = img.closest('[data-mock]')
+		if (host) {
+			if (host.getAttribute('data-fallback')) return
+			host.setAttribute('data-fallback', '1')
+			var kind = host.getAttribute('data-mock')
+			host.innerHTML = kind === 'highlight' ? mockHighlightSVG() : mockSVG(kind)
+			return
+		}
+		var hero = img.closest('#heroArt')
+		if (hero && !hero.getAttribute('data-fallback')) {
+			hero.setAttribute('data-fallback', '1')
+			hero.innerHTML = heroSVG()
+		}
+	}
+	window.nkShotFallback = nkShotFallback
+
 	/* ---------- init ---------- */
 	function init() {
 		try {
@@ -921,7 +982,6 @@
 		} catch (e) {}
 		setTheme(savedTheme)
 		setLang(currentLang)
-		document.getElementById('heroArt').innerHTML = heroSVG()
 		var y = document.getElementById('year')
 		if (y) y.textContent = new Date().getFullYear()
 
