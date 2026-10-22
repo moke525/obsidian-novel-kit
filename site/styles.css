@@ -63,7 +63,7 @@ body {
 
 a { color: inherit; text-decoration: none; }
 code {
-  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-family: "JetBrains Mono", SFMono-Regular, Menlo, Consolas, monospace;
   background: var(--accent-soft);
   color: var(--accent-2);
   padding: 1px 6px;
@@ -305,7 +305,8 @@ code {
 .privacy-inner { max-width: 820px; margin: 0 auto; }
 .privacy-copy h2 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); margin: 0 0 14px; font-weight: 800; }
 .privacy-copy p { color: var(--text-dim); font-size: 1.02rem; }
-.privacy-bold { color: var(--text) !important; font-weight: 650; }
+/* 提高特异性取代 !important：.privacy-copy p (0,1,1) 会盖掉单独的类选择器 */
+.privacy-copy p.privacy-bold { color: var(--text); font-weight: 650; }
 
 /* ---------------- PRICING ---------------- */
 .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 980px; margin: 0 auto; }
@@ -358,7 +359,8 @@ code {
 .footer-col a:hover { color: var(--accent-2); }
 .footer-brand .brand-mark { display: inline-grid; }
 .footer-brand p { color: var(--text-dim); font-size: 0.9rem; margin: 10px 0 4px; }
-.footer-license { color: var(--text-faint) !important; font-size: 0.82rem !important; }
+/* 提高特异性取代 !important：.footer-brand p (0,2,1) 会盖掉单独的类选择器 */
+.footer-brand p.footer-license { color: var(--text-faint); font-size: 0.82rem; }
 .foot-libs { color: var(--text-faint); font-size: 0.85rem; line-height: 1.8; display: block; }
 .footer-bottom {
   max-width: var(--maxw); margin: 30px auto 0; padding-top: 20px;
