@@ -8,9 +8,9 @@
 
 [![Obsidian plugin](https://img.shields.io/badge/Obsidian-plugin-7C3AED?logo=obsidian&logoColor=white)](https://community.obsidian.md/plugins/novel-kit)
 [![Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fcommunity.obsidian.md%2Fapi%2Fv1%2Fplugins%2Fnovel-kit&query=%24.downloads&label=downloads&logo=obsidian&logoColor=white&color=7C3AED)](https://community.obsidian.md/plugins/novel-kit)
-[![Latest release](https://img.shields.io/github/v/release/moke525/obsidian-novel-kit?sort=semver)](https://github.com/moke525/obsidian-novel-kit/releases/latest)
-[![Minimum Obsidian version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmoke525%2Fobsidian-novel-kit%2Fmain%2Fmanifest.json&query=%24.minAppVersion&label=min%20Obsidian&color=blue)](manifest.json)
-[![License](https://img.shields.io/github/license/moke525/obsidian-novel-kit)](LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/moke525/obsidian-svelte-plugin-2026-8?sort=semver)](https://github.com/moke525/obsidian-svelte-plugin-2026-8/releases/latest)
+[![Minimum Obsidian version](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmoke525%2Fobsidian-svelte-plugin-2026-8%2Fmain%2Fpublic%2Fmanifest.json&query=%24.minAppVersion&label=min%20Obsidian&color=blue)](public/manifest.json)
+[![License](https://img.shields.io/github/license/moke525/obsidian-svelte-plugin-2026-8)](LICENSE)
 
 为长篇网文与小说写作打造的 Obsidian 一站式写作套件。<br />
 一部作品就是库里的一个文件夹 · 设定 / 大纲 / 正文全是明文 Markdown · 七个视图看同一批笔记。
@@ -28,8 +28,16 @@
 
 </div>
 
-> [!IMPORTANT]
-> **本插件基于桌面版开发，仅支持桌面端。**
+
+<br />
+
+## 📺 教学视频
+
+[![在 B 站观看 Novel-kit 教学视频](assets/bilibili-cover.jpg)](https://www.bilibili.com/video/BV1Kfn66mETt/)
+
+**点封面直接打开 B 站**（约 91 分钟）：单机码字的辅助插件，覆盖高亮、时间线、字数统计、历史回放、校对等约二十个功能。
+
+配合「加载示例」生成的 `System/示例导览.md` 一起看，上手最快。
 
 <br />
 
@@ -46,7 +54,7 @@
 <img width="100%" alt="关系图" src="assets/graph.png" />
 
 ### 📅 时间线
-<sub>按时间排场景 · 分组选「文件夹」时拖动会真的移动文件 · 起止日期直接改 frontmatter</sub>
+<sub>按时间排场景 · 分组选「文件夹」时拖动会真的移动文件 · 起止日期直接改 frontmatter · 工具栏「播放时间线」可按时间先后逐个播放事件</sub>
 
 <img width="100%" alt="时间线" src="assets/timeline.png" />
 
@@ -58,37 +66,36 @@
 ### 🗺️ 地图与时空
 <sub>底图打坐标标记 · 时空把地图当平面、时间当 z 轴 · 坐标写成「地图名：x，y」（全角冒号与逗号）</sub>
 
-<img width="100%" alt="地图与时空" src="assets/spaceTime.png" />
+<img width="100%" alt="地图与时空" src="assets/spacetime.png" />
 
 ### 🃏 卡片与表格
 <sub>卡片是可配置的字段墙 · 表格能分组、过滤、钉列、就地改字段 · 两者都支持拖拽排序与跨组拖拽</sub>
 
 <img width="100%" alt="卡片与表格" src="assets/card.png" />
 
+### 🧩 笔记内联视图（代码块）
+<sub>在正文里写 `novel-timeline` / `novel-table` / `novel-cards` 代码块，直接内联渲染可交互的时间线 / 表格 / 卡片 · 数据取承载笔记所属的作品 · 显示配置按块独立存回代码块，改一块不影响其它块和面板</sub>
+
+````markdown
+```novel-table
+height: 560
+```
+````
+
+命令面板的「插入时间线视图块 / 插入表格视图块 / 插入卡片视图块」会在光标处直接插入块骨架。高度用 `height: 560` 调（200–1600）；块内改动只写回该块的 `config: {...}` 行。
+
 ### 🧵 伏笔 · 钩子 · 剧情 · 正文
 <sub>主操作全在正文里：框选句子 → 右键 → 埋设 / 回收，状态一路走 未埋设 → 已埋设 → 已关联 → 已回收</sub>
 
 <img width="100%" alt="伏笔与钩子" src="assets/foreshadowing.png" />
 
+
 ### 📝 创作辅助工具
 
-<table>
-<tr>
-<td width="33%" align="center" valign="top"><img width="100%" alt="灵感卡片" src="assets/inspiration.png" /><br /><b>灵感卡片</b><br /><sub>可直接拖进关系图 / 时间线 / 裂变变成情节</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="词条" src="assets/glossary.png" /><br /><b>词条</b><br /><sub>设定速查，按层级组织</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="词频" src="assets/wordfreq.png" /><br /><b>词频</b><br /><sub>统计正文用词，看出偏好与重复</sub></td>
-</tr>
-<tr>
-<td width="33%" align="center" valign="top"><img width="100%" alt="校对" src="assets/proofread.png" /><br /><b>校对</b><br /><sub>就地检查，逐条确认修改</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="码字目标" src="assets/writing-goal.png" /><br /><b>码字目标</b><br /><sub>每日目标与进度提醒</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="取名" src="assets/naming.png" /><br /><b>取名</b><br /><sub>按风格生成角色与地名</sub></td>
-</tr>
-<tr>
-<td width="33%" align="center" valign="top"><img width="100%" alt="文件模板" src="assets/file-template.png" /><br /><b>文件模板</b><br /><sub>按「目标文件夹 + 文件名格式」自动套模板并重命名</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="历史快照" src="assets/snapshot.png" /><br /><b>历史快照</b><br /><sub>自动存档，恢复前能左右对比</sub></td>
-<td width="33%" align="center" valign="top"><img width="100%" alt="悬浮便签" src="assets/sticky-note.png" /><br /><b>悬浮便签</b><br /><sub>随手记，自动保存</sub></td>
-</tr>
-</table>
+| **灵感卡片** 可直接拖进关系图 / 时间线 / 裂变变成情节   | **词条** 设定速查，按层级组织      | **词频** 统计正文用词，看出偏好与重复 |
+| ---------------------------------- | ---------------------- | --------------------- |
+| **校对** 就地检查，逐条确认修改                 | **码字目标** 每日目标与进度提醒     | **取名** 按风格生成角色与地名     |
+| **文件模板** 按「目标文件夹 + 文件名格式」自动套模板并重命名 | **历史快照** 自动存档，恢复前能左右对比 | **悬浮便签** 随手记，自动保存     |
 
 ### 🖥️ 桌面端
 
@@ -108,6 +115,7 @@
 1. **注册一部作品**：打开创作主页点「新增作品」，或运行命令「注册小说工作区」。文件夹里会自动铺好 `设定/`、`事件/`、`正文/`、`灵感/`、`System/`。
 2. **先看示例**（可选）：库里一部作品都没有时，创作面板顶部会出现 **「加载示例」**，写入一部《残虹夜雨》——1 个时代（北境乱世）、3 个场景与 6 段大纲、4 篇成稿、14 条线索（8 条已回收、6 条刻意不回收用来演示筛选）、一张「北境」地图与四处坐标、4 张灵感卡片、2 张悬浮便签，外加两份中文说明书。跟着导览走一遍最快。
 3. **开始写**：在 `正文/` 下写稿，框选句子埋伏笔与钩子；需要看全局时再打开小说创作面板（Ribbon 书本图标）。
+4. **贴进正文**（可选）：用命令「插入时间线 / 表格 / 卡片视图块」把对应视图内联进笔记；每个块的显示配置独立存在自己的代码块里。
 
 <details>
 <summary><kbd>🎯 主要命令</kbd></summary>
@@ -121,6 +129,7 @@
 | 打开小说创作面板 | 打开七个视图所在的主面板 |
 | 打开创作主页 | 打开仪表盘主页 |
 | 加载示例 | 写入示例作品《残虹夜雨》 |
+| 插入时间线 / 表格 / 卡片视图块 | 在当前笔记光标处插入对应的内联视图代码块 |
 | 新建伏笔 / 回收伏笔 | 在正文选区上埋设与回收 |
 | 切换写作模式 | 桌面端：打字机居中滚动 |
 
@@ -217,9 +226,21 @@ npm run lint          # Biome
 | [relation-graph](https://github.com/seeksdream/relation-graph) | MIT | © seeksdream |
 | [CC-CEDICT](https://cc-cedict.org/) | CC BY-SA 4.0 | © CC-CEDICT project（词典由用户按需下载，不打包） |
 
-⭐ Star · 🐛 [提交问题](https://github.com/moke525/obsidian-novel-kit/issues)
+### 📮 联系方式 / Contact
+
+**QQ 群：`431076635`** —— 报 Bug、提建议、聊用法都欢迎进群。
+
+⭐ Star · 🐛 [提交问题](https://github.com/moke525/obsidian-svelte-plugin-2026-8/issues)
 
 <br />
+
+**祝你写作愉快！** ✍️
+
+</div>
+
+<br />
+
+<div align="center">
 
 ## 💗 支持 / Support
 
@@ -230,9 +251,5 @@ If you like this plugin and want to support the author to keep updating, you can
 | 微信 / WeChat Pay | 支付宝 / Alipay |
 |:---:|:---:|
 | <img src="assets/wechat-pay.png" width="220" alt="微信支付收款码" /> | <img src="assets/ali-pay.png" width="220" alt="支付宝收款码" /> |
-
-<br />
-
-**祝你写作愉快！** ✍️
 
 </div>

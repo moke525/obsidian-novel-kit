@@ -58,6 +58,7 @@ Most entry points can be switched off individually in settings; doing so hides t
 - **Create**: register workspace / sticky note / inspiration
 - **Toggle**: highlight settings, sticky notes, file-tree word count, end-of-line word count, stage ruler, selection word count, focus mode
 - **Selection**: extract to sticky note / inspiration / highlight file / highlight comment
+- **Insert**: timeline / table / cards view block (drops a ready-to-use inline view code block at the cursor)
 - **Maintenance**: rebuild node graph, re-apply file-tree sort, reload CSS snippets
 
 Editor context menus add: locate / create foreshadowing & hooks, edit hook/foreshadowing, generate manuscript, link to scene…
@@ -142,7 +143,7 @@ Top bar: work dropdown + refresh, then one row of view tabs: **graph · timeline
 | View | What it does |
 | --- | --- |
 | **Graph** | Relationship graph: `关系` / `relation` field links, org structures, pack / piece drilling; orange sockets are foreshadowing, blue ones are hooks. Toolbar **filter** controls visibility and special styles, **display config** controls type mapping and colours |
-| **Timeline** | Scenes / chapters / beats arranged by time; with grouping set to folder, dragging moves the real file |
+| **Timeline** | Scenes / chapters / beats arranged by time; with grouping set to folder, dragging moves the real file; the toolbar's **Play timeline** steps through events in chronological order |
 | **Fission** | Multi-column card outline (reads `事件/` by default). Hidden in simple mode |
 | **Map** | Markers on a base image; the spacetime view needs at least one map |
 | **Spacetime** | Three dimensions: x / y = map, z = time; per-character trail mode available |
@@ -150,6 +151,27 @@ Top bar: work dropdown + refresh, then one row of view tabs: **graph · timeline
 | **Table** | Grouping, filtering, pinned columns, inline editing; shares the same rule components as the graph |
 
 **Highlight settings** are not in the panel: they live in **Settings → Highlight settings** and are global for every registered work. Word lists can be collected from all registered works; a legacy `System/highlight.json` inside a work is imported once when needed.
+
+### Inline views (code blocks)
+
+Timeline, table and cards can also live directly in any note's body:
+
+```novel-timeline
+height: 560
+```
+
+```novel-table
+height: 560
+```
+
+```novel-cards
+height: 560
+```
+
+- `height` is in pixels, 200–1600, default 560; optional.
+- **Data comes from the work that owns the note**: put the block in another work's note and you see that work's data, not the currently open one.
+- **Display config is per block**: changing columns / filters / grouping / sorting / templates inside a block writes back to that block's own `config: {...}` line, and only the `height` / `config` lines are rewritten. One block never affects another block or the panel. Search terms and the current page are transient and are not written into the block.
+- Blocks without a `config` line keep following the work archive (timeline, table and cards each follow their own archive).
 
 ---
 
