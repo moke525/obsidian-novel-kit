@@ -143,12 +143,12 @@ Top bar: work dropdown + refresh, then one row of view tabs: **graph · timeline
 | View | What it does |
 | --- | --- |
 | **Graph** | Relationship graph: `关系` / `relation` field links, org structures, pack / piece drilling; orange sockets are foreshadowing, blue ones are hooks. Toolbar **filter** controls visibility and special styles, **display config** controls type mapping and colours |
-| **Timeline** | Scenes / chapters / beats arranged by time; with grouping set to folder, dragging moves the real file; the toolbar's **Play timeline** steps through events in chronological order |
+| **Timeline** | Scenes / chapters / beats arranged by time; with grouping set to folder, dragging moves the real file; the toolbar's **Play timeline** steps through events in chronological order. View config can add **marker periods** — spanning the header down through the body, draggable and collapsible from their head; when collapsed the period is removed from the axis and replaced by a hatched divider no wider than the **maximum width** setting, labelled with its start / end times, shifting later ticks and events leftward. Events dropped onto their edges are nudged clear automatically |
 | **Fission** | Multi-column card outline (reads `事件/` by default). Hidden in simple mode |
 | **Map** | Markers on a base image; the spacetime view needs at least one map |
 | **Spacetime** | Three dimensions: x / y = map, z = time; per-character trail mode available |
-| **Cards** | Configurable wall of fields; pick fields and controls in the template editor |
-| **Table** | Grouping, filtering, pinned columns, inline editing; shares the same rule components as the graph |
+| **Cards** | Configurable wall of fields; pick fields and controls in the template editor; grouping and sorting support multiple schemes (switching a scheme swaps the whole configuration; the right side is read-only until a scheme is selected) |
+| **Table** | Grouping, filtering, pinned columns, inline editing; grouping / sorting / conditional formatting each support multiple schemes, and conditional formatting colours cells by field condition; shares the same rule components as the graph; system fields such as uuid and relation / timestamp keys are hidden by default and can be re-enabled in the columns panel |
 
 **Highlight settings** are not in the panel: they live in **Settings → Highlight settings** and are global for every registered work. Word lists can be collected from all registered works; a legacy `System/highlight.json` inside a work is imported once when needed.
 
@@ -170,7 +170,8 @@ height: 560
 
 - `height` is in pixels, 200–1600, default 560; optional.
 - **Data comes from the work that owns the note**: put the block in another work's note and you see that work's data, not the currently open one.
-- **Display config is per block**: changing columns / filters / grouping / sorting / templates inside a block writes back to that block's own `config: {...}` line, and only the `height` / `config` lines are rewritten. One block never affects another block or the panel. Search terms and the current page are transient and are not written into the block.
+- **Display config is per block**: changing columns / filters / grouping / sorting / conditional formatting / templates inside a block writes back to that block's own `config: {...}` line, and only the `height` / `config` lines are rewritten. One block never affects another block or the panel. Multiple blocks of the same kind in one note stay independent too, and a write-back only replaces the lines of its own block; an inline timeline holds off writing while a config panel is open, so the panel is not closed by a write-back. Search terms and the current page are transient and are not written into the block.
+- **Inline timeline markers and inline cards grouping / sorting schemes are per block too**: marker add / remove, maximum width and collapsed state, as well as a scheme's selection and contents, write back to that block's own config and never rewrite the work archive.
 - Blocks without a `config` line keep following the work archive (timeline, table and cards each follow their own archive).
 
 ---
