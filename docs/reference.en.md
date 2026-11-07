@@ -15,7 +15,7 @@ This is the long form of the [README](../README.en.md). The README gets you star
 2. [Work workspace](#work-workspace)
 3. [Studio home](#studio-home)
 4. [Studio panel: seven views](#studio-panel-seven-views)
-5. [Foreshadowing · hooks · plot · manuscript](#foreshadowing--hooks--plot--manuscript)
+5. [Causal · plot · manuscript](#causal--plot--manuscript)
 6. [Sidebars and writing aids](#sidebars-and-writing-aids)
 7. [Vault-wide features](#vault-wide-features)
 8. [Shared lore groups](#shared-lore-groups)
@@ -40,7 +40,7 @@ Most entry points can be switched off individually in settings; doing so hides t
 | book-open | Novel panel | main |
 | hash | Word frequency | right sidebar |
 | spell-check | Proofreading | right sidebar |
-| git-branch | Foreshadow ledger | right sidebar |
+| git-branch | Causal ledger | right sidebar |
 | lightbulb | Inspiration library | right sidebar |
 | list-tree | Glossary | right sidebar |
 | scroll-text | Plot cross-check | right sidebar |
@@ -54,14 +54,14 @@ Most entry points can be switched off individually in settings; doing so hides t
 
 ### Commands
 
-- **Open**: studio home / novel panel / each sub-view / word frequency / proofreading / foreshadowing / inspiration / glossary / plot / marks / word count / naming / search / phone preview / CSS snippets / snapshots
+- **Open**: studio home / novel panel / each sub-view / word frequency / proofreading / causal / inspiration / glossary / plot / marks / word count / naming / search / phone preview / CSS snippets / snapshots
 - **Create**: register workspace / sticky note / inspiration
 - **Toggle**: highlight settings, sticky notes, file-tree word count, end-of-line word count, stage ruler, selection word count, focus mode
 - **Selection**: extract to sticky note / inspiration / highlight file / highlight comment
 - **Insert**: timeline / table / cards view block (drops a ready-to-use inline view code block at the cursor)
 - **Maintenance**: rebuild node graph, re-apply file-tree sort, reload CSS snippets
 
-Editor context menus add: locate / create foreshadowing & hooks, edit hook/foreshadowing, generate manuscript, link to scene…
+Editor context menus add: remove blank lines, anchor the selected text to a 因 / 痕 / 果 entry, add or recycle a mark, extract to sticky note / inspiration / highlight file / highlight comment, add to dictionary, and feature toggles.
 
 ---
 
@@ -82,7 +82,6 @@ My Novel/
     workspace.json / graph.json / timeline.json / home.json …
     templates/   # file templates (default)
     示例导览.md  # written by “Load sample”
-    伏笔钩子剧情正文.md
 ```
 
 Content is plain Markdown plus frontmatter; view layouts and templates live in `System/*.json`.
@@ -91,8 +90,8 @@ Content is plain Markdown plus frontmatter; view layouts and templates live in `
 
 | Mode | Difference |
 | --- | --- |
-| **Simple** | One fewer view (no fission); the graph has no pack / piece drilling; foreshadowing and hooks are called “marks” |
-| **Full** | Every view, including hook / foreshadowing nodes and plot cross-check |
+| **Simple** | One fewer view (no fission); the graph has no pack / piece drilling; causal is replaced by the “marks” wording |
+| **Full** | Every view, including causal and plot cross-check |
 
 Marks are available in both modes (always called “marks”).
 
@@ -142,7 +141,7 @@ Top bar: work dropdown + refresh, then one row of view tabs: **graph · timeline
 
 | View | What it does |
 | --- | --- |
-| **Graph** | Relationship graph: `关系` / `relation` field links, org structures, pack / piece drilling; orange sockets are foreshadowing, blue ones are hooks. Toolbar **filter** controls visibility and special styles, **display config** controls type mapping and colours |
+| **Graph** | Relationship graph: `关系` / `relation` field links, org structures, pack / piece drilling. Toolbar **filter** controls visibility and special styles, **display config** controls type mapping and colours |
 | **Timeline** | Scenes / chapters / beats arranged by time; with grouping set to folder, dragging moves the real file; the toolbar's **Play timeline** steps through events in chronological order. View config can add **marker periods** — spanning the header down through the body, draggable and collapsible from their head; when collapsed the period is removed from the axis and replaced by a hatched divider no wider than the **maximum width** setting, labelled with its start / end times, shifting later ticks and events leftward. Events dropped onto their edges are nudged clear automatically |
 | **Fission** | Multi-column card outline (reads `事件/` by default). Hidden in simple mode |
 | **Map** | Markers on a base image; the spacetime view needs at least one map |
@@ -176,20 +175,65 @@ height: 560
 
 ---
 
-## Foreshadowing · hooks · plot · manuscript
+## Causal · plot · manuscript
 
 **The main operations happen in the manuscript.** The graph and its siblings are visualisations.
 
-| | Manuscript | Foreshadowing | Hook | Plot |
-| --- | --- | --- | --- | --- |
-| Role | Drafting and the entry point for planting | Plants the clue | Resolves the clue | Cross-checks the outline |
-| Where | Select text in `{work}/正文/`, right-click | Create / locate / edit from the manuscript | Same | Ribbon scroll-text (read-only) |
+| | Manuscript | Causal file | Plot |
+| --- | --- | --- | --- |
+| Role | Drafting and the entry point for anchoring | Records 因 / 痕 / 果 | Cross-checks the outline |
+| Where | Select text in the manuscript or an event note, right-click to anchor | Add / edit / jump from the causal ledger | Ribbon scroll-text (read-only) |
 
-Status is tracked on the foreshadowing: **not planted → planted → linked → resolved** (plus the abnormal **dangling** state). One foreshadowing can be pointed at by several hooks.
+### How causal files are recognised
 
-Suggested order: generate or link the manuscript → select text to create / locate → link hook and foreshadowing in the edit dialog → keep the plot panel open while writing → review unresolved ones in the ledger → open the graph only when you need to see relationships.
+Any Markdown inside a work counts as a causal file when its `tags` contain `因果` — no folder convention. The plugin **does not provide a create-causal-file entry**; when no causal file exists the panel shows an empty-state hint.
 
-Details live in `System/伏笔钩子剧情正文.md` inside the work (Chinese).
+The three slots are `因`, `痕`, `果`. Each is an object field storing “entry id → entry object”; an empty slot is `{}`. The owning line lives in `因果线` (default `主线`).
+
+```yaml
+---
+tags: [因果]
+因果线: 主线
+因:
+  1a2b:
+    id: 1a2b
+    label: A disappearance in the rain
+    content: Who took the person away that night
+    tags: [clue]
+    anchors:
+      - path: 事件/开篇.md
+        type: 事件
+        position: { from: 120, to: 132 }
+        text: 雨夜里少了个人
+痕: {}
+果: {}
+---
+```
+
+An entry's `content` is free-form notes and `tags` are custom labels. Each anchor is `{ path, type, position, text }`: `type` is `事件` (event note) or `正文` (anything else), `position` is an absolute document offset `{ from, to }` (frontmatter included, same as editor selections), and `text` stores the selected text at anchor time for comparison.
+
+### How status is derived (never persisted)
+
+An anchor holds when the file exists **and** the text at `position` still equals the recorded `text` (leading / trailing whitespace ignored).
+
+| Slot | Event anchor holds | Event anchor fails | Body anchor holds | Body anchor fails | No anchors |
+| --- | --- | --- | --- | --- | --- |
+| `因` / `痕` | 已设 (set) | 失设 (unset) | 已种 (planted) | 失种 (unplanted) | 悬空 (dangling) |
+| `果` | 已育 (raised) | 空育 (empty) | 已收 (collected) | 丢失 (lost) | 悬空 (dangling) |
+
+With several anchors, any success wins; when all fail the event state takes priority. Hovering or jumping reports the reason (file missing, position out of range, text at the position changed, and so on).
+
+### Causal ledger panel
+
+Open it from the `git-branch` ribbon or the command; it is available only in full mode with **Causal panel** enabled in settings. Four views sit on top: **all causal / 因 / 痕 / 果**. Each causal file gets one card showing all three slots; entries carry a status badge and anchor chips, and can be added / edited / deleted, unanchored, or jumped to. Docked in the right sidebar the panel is a single column; dragged into a tab the cards switch to an adaptive grid.
+
+### Anchoring and jumping
+
+Select text in the editor → right-click **Anchor as causal** → pick a 因 / 痕 / 果 entry: offsets are normalised automatically, event notes are recorded as `事件` and everything else as `正文`, and anchoring the same position twice is rejected. Clicking an entry in the panel returns to the anchored position and selects that range; if the file was deleted or the text changed, you get a clear warning instead of a wrong jump.
+
+Legacy `伏笔` / `钩子` arrays in frontmatter are no longer read, and are never rewritten or migrated automatically.
+
+Details live in `System/示例导览.md` inside the work (Chinese).
 
 ---
 
@@ -279,12 +323,12 @@ Path: **Settings → Novel-kit**.
 ## Suggested workflow
 
 1. Write in the **manuscript**; generate or link beats only when you need the outline.
-2. Select the planting / resolving sentence → create and locate → link hook and foreshadowing in the edit dialog.
-3. Keep **plot** open while writing; sweep unresolved clues in the **ledger**; clicking a highlight scrolls to the card.
+2. Select key sentences in the manuscript or an event note → right-click to anchor them to a 因 / 痕 / 果 entry.
+3. Keep **plot** open while writing; sweep statuses in the **causal ledger** (失设 / 失种 / 空育 / 丢失 / 悬空); clicking an entry returns to its anchor.
 4. Open graph / timeline / fission / map / spacetime when you need relationships, pacing or space.
 5. Check fields in table / cards, word usage in word frequency, suspects in proofreading, goals in word count, layout in phone preview; snapshot important moments by hand.
 
-Inspiration → drag into graph / timeline / fission → fill in fields → generate manuscript → **back to selecting text in the draft to locate it**.
+Inspiration → drag into graph / timeline / fission → fill in fields → generate manuscript → **back to selecting text in the draft to anchor it**.
 
 ---
 
@@ -328,8 +372,8 @@ Inspiration → drag into graph / timeline / fission → fill in fields → gene
 
 ### Writing and sidebars
 
-- **Selecting text and planting a foreshadowing does nothing?**  
-  Work inside the `正文/` folder of a registered work, and check that novel writing is enabled in settings.
+- **Selecting text and anchoring it as causal does nothing?**  
+  Make sure the file belongs to a registered work, novel writing is enabled, the workspace mode is full, and the causal panel is not switched off.
 
 - **Why can't I edit notes in a shared lore group?**  
   Shared content is read-only in the borrowing work. Edit it in the source work.
