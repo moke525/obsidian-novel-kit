@@ -20,6 +20,8 @@ An all-in-one writing suite for long-form web novels in Obsidian.
 
 One work is one folder in your vault · Settings, outlines and manuscripts are all plain Markdown · Seven views over the same notes.
 
+<a href="pages/index.html">`📘 User Guide`</a>
+
 <a href="docs/reference.en.md">`📖 Full Reference`</a>
 
 <a href="docs/reference.en.md#troubleshooting">`❓ FAQ`</a>

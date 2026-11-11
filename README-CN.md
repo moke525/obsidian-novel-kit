@@ -17,6 +17,7 @@
 
 <br />
 
+<a href="pages/index.html"><kbd>📘 使用指南</kbd></a>
 <a href="docs/reference.zh-CN.md"><kbd>📖 完整参考</kbd></a>
 <a href="docs/reference.zh-CN.md#常见问题"><kbd>❓ 常见问题</kbd></a>
 

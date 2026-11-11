@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>数据与隐私 · Novel-kit 使用指南</title>
+<meta name="description" content="Novel-kit 使用指南：数据与隐私" />
+<link rel="stylesheet" href="../site/docs.css" />
+</head>
+<body>
+<header class="topbar">
+<button class="icon-btn menu-btn" id="menuBtn" aria-label="打开目录" aria-expanded="false">☰</button>
+<a class="brand" href="../index.html"><span class="brand-mark">N</span><span>Novel-kit</span></a>
+<span class="crumb">主页 / <a href="../index.html">Novel-kit</a> / <a href="index.html">使用指南</a> / 数据与隐私</span>
+<div class="top-actions">
+<a class="icon-btn" href="../index.html">主页</a>
+<a class="icon-btn" href="../README.en.md">English</a>
+<button class="icon-btn" id="themeBtn" title="切换主题"><span class="theme-icon">🌙</span></button>
+</div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="文档目录">
+<h2>开始</h2>
+<a href="index.html">指南总览</a>
+<a href="install.html">安装</a>
+<a href="workspace.html">作品工作区</a>
+<a href="settings.html">插件设置</a>
+<a href="commands.html">命令与入口</a>
+<h2>创作面板</h2>
+<a href="home.html">创作主页</a>
+<a href="panel.html">创作面板</a>
+<a href="graph.html">关系图</a>
+<a href="timeline.html">时间线</a>
+<a href="timesystem.html">时间体系</a>
+<a href="thread.html">脉络</a>
+<a href="fission.html">裂变</a>
+<a href="map.html">地图</a>
+<a href="spacetime.html">时空</a>
+<a href="cards.html">卡片</a>
+<a href="table.html">表格</a>
+<a href="inline.html">内联视图</a>
+<h2>伏笔与剧情</h2>
+<a href="destiny.html">命运蓝图</a>
+<a href="foreshadow.html">伏笔总览</a>
+<a href="plot.html">剧情对照</a>
+<a href="marks.html">标记账本</a>
+<a href="journal.html">作品日志</a>
+<h2>写作辅助</h2>
+<a href="inspiration.html">灵感库</a>
+<a href="glossary.html">词条</a>
+<a href="wordfreq.html">词频</a>
+<a href="proofread.html">校对</a>
+<a href="sticky.html">悬浮便签</a>
+<a href="wordcount.html">码字与字数</a>
+<a href="naming.html">取名</a>
+<a href="phone.html">手机预览</a>
+<h2>全局能力</h2>
+<a href="highlight.html">高亮</a>
+<a href="templates.html">文件模板</a>
+<a href="filesort.html">文件树排序</a>
+<a href="css.html">CSS 片段</a>
+<a href="typewriter.html">写作模式</a>
+<a href="snapshot.html">历史快照</a>
+<a href="search.html">高级搜索</a>
+<a href="json.html">JSON Studio</a>
+<a href="series.html">共享设定组</a>
+<a href="export.html">导出</a>
+<h2>问题</h2>
+<a href="faq.html">常见问题</a>
+<a href="data.html" class="active">数据与隐私</a>
+</nav>
+<main class="article">
+<h1>数据与隐私</h1>
+<nav class="guide-toc" aria-label="本页导览"><a href="#sec-intro"><span class="guide-toc__no">1</span><span>功能简介</span></a><a href="#sec-ui"><span class="guide-toc__no">2</span><span>界面元素</span></a><a href="#sec-steps"><span class="guide-toc__no">3</span><span>操作方法与步骤</span></a><a href="#sec-keyboard"><span class="guide-toc__no">4</span><span>键盘操作</span></a><a href="#sec-commands"><span class="guide-toc__no">5</span><span>命令行</span></a><a href="#sec-cautions"><span class="guide-toc__no">6</span><span>注意事项</span></a></nav>
+<section class="guide-section" id="sec-intro" data-section="intro"><h2>功能简介</h2>
+<p class="lead">data.json 与联网范围</p>
+<p>本页属于「问题」，按 <strong>功能简介 → 界面元素 → 操作方法与步骤 → 键盘操作 → 命令行 → 注意事项</strong> 组织，末尾的「其他」放补充说明与相关页面。</p>
+</section>
+<section class="guide-section" id="sec-ui" data-section="ui"><h2>界面元素</h2>
+<h3>界面元素一览</h3>
+<ul><li>插件 <code>data.json</code></li><li>作品 <code>System/*.json</code></li><li>数据位置对照表与联网范围说明</li></ul>
+<h3>网络</h3>
+<p>默认可完全离线，无遥测。仅主动触发：</p>
+<ul>
+<li>下载分词词典 → jsdelivr / mdbg，只下载。</li>
+<li>主页网页表格 → 你填的 URL，只读 HTML。</li>
+</ul>
+<p>一律 <code>requestUrl</code>，走 Obsidian 代理。</p>
+<p>QQ 群 431076635 · 微信 mtztm525 ·
+<a href="https://github.com/moke525/obsidian-novel-kit/issues" target="_blank" rel="noopener">Issues</a></p>
+<div class="pay-row">
+<figure><img src="../assets/wechat-pay.png" alt="微信" /><figcaption>微信</figcaption></figure>
+<figure><img src="../assets/ali-pay.png" alt="支付宝" /><figcaption>支付宝</figcaption></figure>
+</div>
+</section>
+<section class="guide-section" id="sec-steps" data-section="steps"><h2>操作方法与步骤</h2>
+<h3>补充步骤</h3>
+<ol class="steps"><li>先看「数据位置对照表」确认要改的是哪个文件。</li><li>需要重置某块视图时，只删对应的 <code>System/*.json</code>，不要删 <code>data.json</code>。</li></ol>
+</section>
+<section class="guide-section" id="sec-keyboard" data-section="keyboard"><h2>键盘操作</h2>
+<table class="key-table"><thead><tr><th>按键</th><th>作用</th></tr></thead><tbody><tr><td><kbd class="kbd">Ctrl/Cmd+P</kbd></td><td>打开 Obsidian 命令面板，按名称搜索并执行本页「命令行」里的命令（Obsidian 自带，不是插件默认快捷键）</td></tr></tbody></table>
+<p>本页是数据说明，无插件内键盘操作。</p>
+<p>所有视图级快捷键在输入框、正文编辑态内都不触发（<code>isTypingTarget</code> 判定）；隐藏或失焦的面板也不响应。下表的「命令行」是另一套入口，两者不要混为一谈。</p>
+</section>
+<section class="guide-section" id="sec-commands" data-section="commands"><h2>命令行</h2>
+<p>本功能没有注册独立的命令面板命令，入口见上方「操作方法与步骤」与「界面元素」。全部命令清单见 <a href="commands.html">命令与入口</a>。</p>
+<p>以上命令<strong>均没有默认快捷键</strong>：源码里的 <code>addCommand</code> 没有声明 <code>hotkeys</code>，需要快捷键请自行到「设置 → 快捷键」绑定。命令面板本身由 Obsidian 提供，不是插件命令。</p>
+</section>
+<section class="guide-section" id="sec-cautions" data-section="cautions"><h2>注意事项</h2>
+<div class="callout callout-danger"><div class="callout-title">Danger</div><p>删 data.json 丢登记与设置，不删笔记。删某个 System json 只重置那块视图。同步冲突时不要用旧的 System json 覆盖新布局。</p></div>
+<h3>通用限制</h3>
+<ul><li>本插件 manifest 声明 <code>isDesktopOnly: true</code>，最低 Obsidian 1.8.7；笔记始终是明文 Markdown，插件只读写 frontmatter 与 <code>System/*.json</code>。</li><li>插件没有为任何命令注册默认快捷键，需要快捷键请到「设置 → 快捷键」按命令名搜索后自行绑定。</li></ul>
+</section>
+<section class="guide-section" id="sec-extra" data-section="extra"><h2>其他</h2>
+<table><thead><tr><th>内容</th><th>位置</th></tr></thead><tbody>
+<tr><td>作品列表、激活作品、历法、全局设置</td><td><code>.obsidian/plugins/novel-kit/data.json</code></td></tr>
+<tr><td>面板当前 Tab</td><td><code>System/workspace.json</code></td></tr>
+<tr><td>关系图 / 时间线 / 脉络 UI / 裂变 / 时空 / 卡片 / 表格</td><td><code>System/graph.json</code>（旧 relations.json 会迁移）、<code>timeline.json</code>、<code>thread.json</code>、<code>fission.json</code>、<code>spaceTime.json</code>、<code>cards.json</code>、<code>table.json</code></td></tr>
+<tr><td>地图</td><td><code>System/maps/</code></td></tr>
+<tr><td>主页模板与待办</td><td><code>System/home.json</code></td></tr>
+<tr><td>作品日志</td><td><code>System/journal/*.json</code></td></tr>
+<tr><td>标记 / 便签 / 词条勾选 / 字段映射</td><td><code>marks.json</code>、<code>note.json</code>、<code>glossary.json</code>、<code>field-map.json</code></td></tr>
+<tr><td>命运蓝图</td><td>作品 <code>命运/*.md</code> 内 <code>novel-blueprint</code> 代码块（旧文件夹名「因果」只读兼容）</td></tr>
+<tr><td>设定、事件、正文、灵感、词条</td><td>作品下对应文件夹 Markdown</td></tr>
+<tr><td>词频词典 / 敏感词</td><td>插件目录 <code>word-freq-dicts/</code>、<code>sensitive-words.json</code></td></tr>
+<tr><td>历史快照</td><td><code>.obsidian/snapshots</code> 与 <code>.memory/</code></td></tr>
+</tbody></table>
+<h3>相关页面</h3>
+<p><a href="faq.html">常见问题</a></p>
+<p><a href="index.html">← 返回指南总览</a> · <a href="../index.html">↑ 返回产品主页</a></p>
+</section>
+<nav class="pager"><a href="faq.html"><span class="dir">上一篇</span>常见问题</a></nav>
+<footer class="footer">© <span id="year"></span> Novel-kit · 仅桌面端 · Apache-2.0</footer>
+</main>
+</div>
+<script src="../site/app.js"></script>
+</body>
+</html>

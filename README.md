@@ -17,6 +17,7 @@ One work is one folder in your vault · Settings, outlines and manuscripts are a
 
 <br />
 
+<a href="pages/index.html"><kbd>📘 User Guide</kbd></a>
 <a href="docs/reference.en.md"><kbd>📖 Full Reference</kbd></a>
 <a href="docs/reference.en.md#troubleshooting"><kbd>❓ FAQ</kbd></a>
 

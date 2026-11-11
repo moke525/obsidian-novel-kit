@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="site/styles.css" />
 	</head>
 	<body>
-		<!-- ============ NAV ============ -->
+		<!-- ============ NAV（主页） ============ -->
 		<header class="nav" id="nav">
 			<div class="nav-inner">
 				<a class="brand" href="#top" aria-label="Novel-kit">
@@ -29,6 +29,7 @@
 					<a href="#install" data-i18n="nav.install">安装</a>
 					<a href="#start" data-i18n="nav.start">快速开始</a>
 					<a href="#faq" data-i18n="nav.faq">常见问题</a>
+					<a class="nav-guide" href="pages/index.html" data-i18n="nav.guide">使用指南</a>
 				</nav>
 				<div class="nav-actions">
 					<button class="icon-btn" id="langBtn" title="切换语言 / Switch language" aria-label="切换语言">中 / EN</button>
@@ -50,6 +51,7 @@
 					<p class="lead" data-i18n="hero.lead">一部作品就是库里的一个文件夹。设定、大纲、正文全是明文 Markdown——七个视图，看同一批笔记。</p>
 					<div class="hero-cta">
 						<a class="btn btn-primary" href="#install" data-i18n="hero.cta1">在 Obsidian 中安装</a>
+						<a class="btn btn-ghost" href="pages/index.html" data-i18n="hero.cta3">阅读使用指南</a>
 						<a class="btn btn-ghost" href="https://github.com/moke525/obsidian-novel-kit" target="_blank" rel="noopener" data-i18n="hero.cta2"
 							>查看 GitHub 仓库</a
 						>
@@ -140,6 +142,43 @@
 			</ol>
 		</section>
 
+		<!-- ============ GUIDE（主页 → 指南页） ============ -->
+		<section class="section section-alt" id="guide">
+			<div class="section-head">
+				<h2 data-i18n="guide.title">使用指南 · 按功能查细节</h2>
+				<p data-i18n="guide.sub">主页只讲「是什么」。装好之后怎么注册作品、每个视图的按钮各自管什么，都拆成独立指南页，随时可以查。</p>
+			</div>
+			<div class="guide-grid">
+				<a class="guide-card" href="pages/install.html">
+					<h3 data-i18n="guide.1t">安装与上手</h3>
+					<p data-i18n="guide.1d">市场 / 手动安装、桌面端限制、第一次启动</p>
+				</a>
+				<a class="guide-card" href="pages/workspace.html">
+					<h3 data-i18n="guide.2t">作品工作区</h3>
+					<p data-i18n="guide.2d">注册作品、目录约定与 tags</p>
+				</a>
+				<a class="guide-card" href="pages/panel.html">
+					<h3 data-i18n="guide.3t">创作面板</h3>
+					<p data-i18n="guide.3d">八个视图怎么切换、侧栏怎么开</p>
+				</a>
+				<a class="guide-card" href="pages/graph.html">
+					<h3 data-i18n="guide.4t">关系图</h3>
+					<p data-i18n="guide.4d">节点、连线、分组与子图</p>
+				</a>
+				<a class="guide-card" href="pages/timeline.html">
+					<h3 data-i18n="guide.5t">时间线</h3>
+					<p data-i18n="guide.5d">排档期、分组、自定义时间体系</p>
+				</a>
+				<a class="guide-card" href="pages/faq.html">
+					<h3 data-i18n="guide.6t">常见问题</h3>
+					<p data-i18n="guide.6d">「看不起来 / 点了没反应」从这里查</p>
+				</a>
+			</div>
+			<div class="guide-more">
+				<a class="btn btn-primary" href="pages/index.html" data-i18n="guide.all">查看全部指南 →</a>
+			</div>
+		</section>
+
 		<!-- ============ FAQ ============ -->
 		<section class="section section-alt" id="faq">
 			<div class="section-head">
@@ -176,7 +215,6 @@
 				<h2 data-i18n="contact.title">联系我们</h2>
 				<p data-i18n="contact.sub">使用问题、功能建议或反馈，都可以通过下面的方式找到我们。</p>
 			</div>
-			<!-- TODO: 以下 QQ 群号与微信号是占位，发布前替换为实际号码 -->
 			<div class="contact-grid">
 				<div class="contact-card reveal">
 					<span class="contact-label" data-i18n="contact.qqLabel">QQ 群</span>
@@ -219,6 +257,7 @@
 				</div>
 				<div class="footer-col">
 					<h4 data-i18n="footer.project">项目</h4>
+					<a href="pages/index.html" data-i18n="footer.guide">使用指南</a>
 					<a href="https://github.com/moke525/obsidian-novel-kit" target="_blank" rel="noopener">GitHub</a>
 					<a href="https://github.com/moke525/obsidian-novel-kit/issues" target="_blank" rel="noopener" data-i18n="footer.issues">提交问题</a>
 					<a href="https://github.com/moke525/obsidian-novel-kit/releases" target="_blank" rel="noopener" data-i18n="footer.releases">版本发布</a>
@@ -234,6 +273,7 @@
 			</div>
 		</footer>
 
-		<script src="site/app.js"></script>
+		<!-- 主页脚本与指南脚本分开：home.js 只服务根 index.html -->
+		<script src="site/home.js"></script>
 	</body>
 </html>

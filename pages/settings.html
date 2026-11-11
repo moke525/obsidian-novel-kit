@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>插件设置 · Novel-kit 使用指南</title>
+<meta name="description" content="Novel-kit 使用指南：插件设置" />
+<link rel="stylesheet" href="../site/docs.css" />
+</head>
+<body>
+<header class="topbar">
+<button class="icon-btn menu-btn" id="menuBtn" aria-label="打开目录" aria-expanded="false">☰</button>
+<a class="brand" href="../index.html"><span class="brand-mark">N</span><span>Novel-kit</span></a>
+<span class="crumb">主页 / <a href="../index.html">Novel-kit</a> / <a href="index.html">使用指南</a> / 插件设置</span>
+<div class="top-actions">
+<a class="icon-btn" href="../index.html">主页</a>
+<a class="icon-btn" href="../README.en.md">English</a>
+<button class="icon-btn" id="themeBtn" title="切换主题"><span class="theme-icon">🌙</span></button>
+</div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="文档目录">
+<h2>开始</h2>
+<a href="index.html">指南总览</a>
+<a href="install.html">安装</a>
+<a href="workspace.html">作品工作区</a>
+<a href="settings.html" class="active">插件设置</a>
+<a href="commands.html">命令与入口</a>
+<h2>创作面板</h2>
+<a href="home.html">创作主页</a>
+<a href="panel.html">创作面板</a>
+<a href="graph.html">关系图</a>
+<a href="timeline.html">时间线</a>
+<a href="timesystem.html">时间体系</a>
+<a href="thread.html">脉络</a>
+<a href="fission.html">裂变</a>
+<a href="map.html">地图</a>
+<a href="spacetime.html">时空</a>
+<a href="cards.html">卡片</a>
+<a href="table.html">表格</a>
+<a href="inline.html">内联视图</a>
+<h2>伏笔与剧情</h2>
+<a href="destiny.html">命运蓝图</a>
+<a href="foreshadow.html">伏笔总览</a>
+<a href="plot.html">剧情对照</a>
+<a href="marks.html">标记账本</a>
+<a href="journal.html">作品日志</a>
+<h2>写作辅助</h2>
+<a href="inspiration.html">灵感库</a>
+<a href="glossary.html">词条</a>
+<a href="wordfreq.html">词频</a>
+<a href="proofread.html">校对</a>
+<a href="sticky.html">悬浮便签</a>
+<a href="wordcount.html">码字与字数</a>
+<a href="naming.html">取名</a>
+<a href="phone.html">手机预览</a>
+<h2>全局能力</h2>
+<a href="highlight.html">高亮</a>
+<a href="templates.html">文件模板</a>
+<a href="filesort.html">文件树排序</a>
+<a href="css.html">CSS 片段</a>
+<a href="typewriter.html">写作模式</a>
+<a href="snapshot.html">历史快照</a>
+<a href="search.html">高级搜索</a>
+<a href="json.html">JSON Studio</a>
+<a href="series.html">共享设定组</a>
+<a href="export.html">导出</a>
+<h2>问题</h2>
+<a href="faq.html">常见问题</a>
+<a href="data.html">数据与隐私</a>
+</nav>
+<main class="article">
+<h1>插件设置</h1>
+<nav class="guide-toc" aria-label="本页导览"><a href="#sec-intro"><span class="guide-toc__no">1</span><span>功能简介</span></a><a href="#sec-ui"><span class="guide-toc__no">2</span><span>界面元素</span></a><a href="#sec-steps"><span class="guide-toc__no">3</span><span>操作方法与步骤</span></a><a href="#sec-keyboard"><span class="guide-toc__no">4</span><span>键盘操作</span></a><a href="#sec-commands"><span class="guide-toc__no">5</span><span>命令行</span></a><a href="#sec-cautions"><span class="guide-toc__no">6</span><span>注意事项</span></a></nav>
+<section class="guide-section" id="sec-intro" data-section="intro"><h2>功能简介</h2>
+<p class="lead">路径：设置 → Novel-kit。多数 Ribbon 可单独关闭：关掉会藏图标并关掉已打开的对应视图。</p>
+<p>本页属于「开始」，按 <strong>功能简介 → 界面元素 → 操作方法与步骤 → 键盘操作 → 命令行 → 注意事项</strong> 组织，末尾的「其他」放补充说明与相关页面。</p>
+</section>
+<section class="guide-section" id="sec-ui" data-section="ui"><h2>界面元素</h2>
+<h3>界面元素一览</h3>
+<ul><li>设置 → Novel-kit 的十个页签</li><li>总开关与逐项 Ribbon 勾选</li><li>词频词典、共享设定组等页内控件</li></ul>
+</section>
+<section class="guide-section" id="sec-steps" data-section="steps"><h2>操作方法与步骤</h2>
+<p>本功能的操作入口与细则见「界面元素」以及 <a href="commands.html">命令与入口</a>；本页正文以规则与数据说明为主。</p>
+</section>
+<section class="guide-section" id="sec-keyboard" data-section="keyboard"><h2>键盘操作</h2>
+<table class="key-table"><thead><tr><th>按键</th><th>作用</th></tr></thead><tbody><tr><td><kbd class="kbd">Ctrl/Cmd+P</kbd></td><td>打开 Obsidian 命令面板，按名称搜索并执行本页「命令行」里的命令（Obsidian 自带，不是插件默认快捷键）</td></tr><tr><td><kbd class="kbd">Enter</kbd></td><td>提交当前输入 / 确认（各类弹窗、内联输入、列表项）</td></tr><tr><td><kbd class="kbd">Esc</kbd></td><td>取消编辑 / 关闭弹窗或抽屉</td></tr></tbody></table>
+<p>所有视图级快捷键在输入框、正文编辑态内都不触发（<code>isTypingTarget</code> 判定）；隐藏或失焦的面板也不响应。下表的「命令行」是另一套入口，两者不要混为一谈。</p>
+</section>
+<section class="guide-section" id="sec-commands" data-section="commands"><h2>命令行</h2>
+<p>在命令面板（<kbd class="kbd">Ctrl/Cmd+P</kbd>）里搜「命令面板里的名称」这一列的中文名即可执行。下表同时给出命令 ID，方便在「设置 → 快捷键」里精确查找、以及在 <code>data.json</code> / 同步配置里核对。</p>
+<table class="cmd-table"><thead><tr><th>命令面板里的名称</th><th>命令 ID</th></tr></thead><tbody><tr><td>开关高亮设置</td><td><code>novel-toggle-highlight</code></td></tr><tr><td>开关文件树字数角标</td><td><code>wordcount-toggle-tree</code></td></tr><tr><td>开关行末字数</td><td><code>wordcount-toggle-paragraph</code></td></tr><tr><td>开关正文阶段标尺</td><td><code>wordcount-toggle-milestones</code></td></tr><tr><td>开关框选字数气泡</td><td><code>wordcount-toggle-selection</code></td></tr><tr><td>打开 UI 组件测试</td><td><code>ui-test-open-panel</code></td></tr></tbody></table>
+<p>以上命令<strong>均没有默认快捷键</strong>：源码里的 <code>addCommand</code> 没有声明 <code>hotkeys</code>，需要快捷键请自行到「设置 → 快捷键」绑定。命令面板本身由 Obsidian 提供，不是插件命令。</p>
+<p>其中「打开 UI 组件测试」通向开发用的 UI 组件测试面板（<code>src/features/Test/</code>），日常写作不需要它。</p>
+</section>
+<section class="guide-section" id="sec-cautions" data-section="cautions"><h2>注意事项</h2>
+<h3>注意事项</h3>
+<ul>
+<li>改 Ribbon 后，下一次打开菜单即生效，不必重启。</li>
+<li>「在新标签页打开文件」会影响文件树、双链和插件视图里的打开行为。</li>
+<li>开发页签「测试」只在开发构建出现。</li>
+<li>关掉「启用小说创作」后，Ribbon、相关命令、工作区文件监听全部停掉；笔记不会删。</li>
+<li>关掉某个功能入口后，对应「打开××」命令也不再生效。</li>
+</ul>
+<h3>通用限制</h3>
+<ul><li>本插件 manifest 声明 <code>isDesktopOnly: true</code>，最低 Obsidian 1.8.7；笔记始终是明文 Markdown，插件只读写 frontmatter 与 <code>System/*.json</code>。</li><li>插件没有为任何命令注册默认快捷键，需要快捷键请到「设置 → 快捷键」按命令名搜索后自行绑定。</li><li>视图级快捷键只在画布 / 视图聚焦且可见时生效，输入框内不触发。</li></ul>
+</section>
+<section class="guide-section" id="sec-extra" data-section="extra"><h2>其他</h2>
+<table><thead><tr><th>页签</th><th>管什么</th></tr></thead><tbody>
+<tr><td>小说创作</td><td>总开关、Ribbon、重建防抖、新标签打开文件、词频词典、共享设定组</td></tr>
+<tr><td>高亮设置</td><td>标记高亮、伏笔高亮、正则/文件名/注释/敏感词/对白</td></tr>
+<tr><td>文件模板</td><td>目标文件夹、文件名格式、模板文件、取名、自动填充</td></tr>
+<tr><td>文件树排序</td><td>中文数字、自然数、自定义词序</td></tr>
+<tr><td>CSS 片段</td><td>桌面端 snippets 与主题配色旋钮</td></tr>
+<tr><td>写作模式</td><td>打字机居中</td></tr>
+<tr><td>历史快照</td><td>自动存档、保留份数</td></tr>
+<tr><td>字数统计</td><td>文件树 / 行末 / 阶段标尺 / 框选</td></tr>
+<tr><td>取名工具</td><td>一次生成条数</td></tr>
+<tr><td>其他</td><td>高级搜索、手机预览、JSON Studio</td></tr>
+<tr><td>导出</td><td>当前隐藏</td></tr>
+</tbody></table>
+<h3>相关页面</h3>
+<p><a href="install.html">安装</a> · <a href="workspace.html">作品工作区</a> · <a href="commands.html">命令与入口</a></p>
+<p><a href="index.html">← 返回指南总览</a> · <a href="../index.html">↑ 返回产品主页</a></p>
+</section>
+<nav class="pager"><a href="workspace.html"><span class="dir">上一篇</span>作品工作区</a><a href="commands.html" style="text-align:right"><span class="dir">下一篇</span>命令与入口</a></nav>
+<footer class="footer">© <span id="year"></span> Novel-kit · 仅桌面端 · Apache-2.0</footer>
+</main>
+</div>
+<script src="../site/app.js"></script>
+</body>
+</html>

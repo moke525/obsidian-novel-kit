@@ -402,3 +402,25 @@ code {
   .contact-grid { grid-template-columns: 1fr; }
   .section { padding: 56px 18px; }
 }
+
+/* ============================================================
+   主页 → 指南站：导航入口与指南卡片
+   ============================================================ */
+.nav-links a.nav-guide,
+.nav-links a.nav-guide:hover { color: var(--accent-2); font-weight: 600; }
+.guide-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  max-width: var(--maxw); margin: 0 auto;
+}
+.guide-card {
+  display: block; padding: 22px 24px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); color: var(--text); text-decoration: none;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.guide-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.guide-card h3 { margin: 0 0 8px; font-size: 1.05rem; font-weight: 700; }
+.guide-card p { margin: 0; color: var(--text-dim); font-size: .93rem; line-height: 1.6; }
+.guide-more { text-align: center; margin-top: 28px; }
+@media (max-width: 900px) { .guide-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .guide-grid { grid-template-columns: 1fr; } }

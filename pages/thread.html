@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>脉络 · Novel-kit 使用指南</title>
+<meta name="description" content="Novel-kit 使用指南：脉络" />
+<link rel="stylesheet" href="../site/docs.css" />
+</head>
+<body>
+<header class="topbar">
+<button class="icon-btn menu-btn" id="menuBtn" aria-label="打开目录" aria-expanded="false">☰</button>
+<a class="brand" href="../index.html"><span class="brand-mark">N</span><span>Novel-kit</span></a>
+<span class="crumb">主页 / <a href="../index.html">Novel-kit</a> / <a href="index.html">使用指南</a> / 脉络</span>
+<div class="top-actions">
+<a class="icon-btn" href="../index.html">主页</a>
+<a class="icon-btn" href="../README.en.md">English</a>
+<button class="icon-btn" id="themeBtn" title="切换主题"><span class="theme-icon">🌙</span></button>
+</div>
+</header>
+<div class="layout">
+<nav class="sidebar" id="sidebar" aria-label="文档目录">
+<h2>开始</h2>
+<a href="index.html">指南总览</a>
+<a href="install.html">安装</a>
+<a href="workspace.html">作品工作区</a>
+<a href="settings.html">插件设置</a>
+<a href="commands.html">命令与入口</a>
+<h2>创作面板</h2>
+<a href="home.html">创作主页</a>
+<a href="panel.html">创作面板</a>
+<a href="graph.html">关系图</a>
+<a href="timeline.html">时间线</a>
+<a href="timesystem.html">时间体系</a>
+<a href="thread.html" class="active">脉络</a>
+<a href="fission.html">裂变</a>
+<a href="map.html">地图</a>
+<a href="spacetime.html">时空</a>
+<a href="cards.html">卡片</a>
+<a href="table.html">表格</a>
+<a href="inline.html">内联视图</a>
+<h2>伏笔与剧情</h2>
+<a href="destiny.html">命运蓝图</a>
+<a href="foreshadow.html">伏笔总览</a>
+<a href="plot.html">剧情对照</a>
+<a href="marks.html">标记账本</a>
+<a href="journal.html">作品日志</a>
+<h2>写作辅助</h2>
+<a href="inspiration.html">灵感库</a>
+<a href="glossary.html">词条</a>
+<a href="wordfreq.html">词频</a>
+<a href="proofread.html">校对</a>
+<a href="sticky.html">悬浮便签</a>
+<a href="wordcount.html">码字与字数</a>
+<a href="naming.html">取名</a>
+<a href="phone.html">手机预览</a>
+<h2>全局能力</h2>
+<a href="highlight.html">高亮</a>
+<a href="templates.html">文件模板</a>
+<a href="filesort.html">文件树排序</a>
+<a href="css.html">CSS 片段</a>
+<a href="typewriter.html">写作模式</a>
+<a href="snapshot.html">历史快照</a>
+<a href="search.html">高级搜索</a>
+<a href="json.html">JSON Studio</a>
+<a href="series.html">共享设定组</a>
+<a href="export.html">导出</a>
+<h2>问题</h2>
+<a href="faq.html">常见问题</a>
+<a href="data.html">数据与隐私</a>
+</nav>
+<main class="article">
+<h1>脉络</h1>
+<nav class="guide-toc" aria-label="本页导览"><a href="#sec-intro"><span class="guide-toc__no">1</span><span>功能简介</span></a><a href="#sec-ui"><span class="guide-toc__no">2</span><span>界面元素</span></a><a href="#sec-steps"><span class="guide-toc__no">3</span><span>操作方法与步骤</span></a><a href="#sec-keyboard"><span class="guide-toc__no">4</span><span>键盘操作</span></a><a href="#sec-commands"><span class="guide-toc__no">5</span><span>命令行</span></a><a href="#sec-cautions"><span class="guide-toc__no">6</span><span>注意事项</span></a></nav>
+<section class="guide-section" id="sec-intro" data-section="intro"><h2>功能简介</h2>
+<p class="lead">上半是命运蓝图（节点 + 桑基），下半是正文/事件多轨道。伏笔挂在蓝图节点上，不是事件 FM。</p>
+<p>本页属于「创作面板」，按 <strong>功能简介 → 界面元素 → 操作方法与步骤 → 键盘操作 → 命令行 → 注意事项</strong> 组织，末尾的「其他」放补充说明与相关页面。</p>
+</section>
+<section class="guide-section" id="sec-ui" data-section="ui"><h2>界面元素</h2>
+<h3>界面元素一览</h3>
+<ul><li>上半：命运蓝图画布与桑基视图</li><li>下半：正文 / 事件多轨道</li><li>因果线与轨道圆点</li></ul>
+<h3>蓝图画布</h3>
+<ul>
+<li>空白右键「添加节点」，没有子菜单。节点不是文件链接，不要指望双击打开某篇设定。</li>
+<li>可添加分组、子图；钉住；改颜色（菜单项右侧 color picker 圆点）。</li>
+<li>节点字段：标题、描述（可折叠）、类型（标签）、cause / effect 圆点。</li>
+<li>从节点拖线到另一节点，松开默认接到该节点。cause 在右、effect 在左；两端都能拖，方向是 cause→effect。</li>
+<li>连线可改标签（标签下方弹出编辑）、粗细、形状、箭头；右键删除。</li>
+<li>桑基图：条宽约 4px，高度随输入连线；缩放用画布手势。连线画在节点之下以免被挡住。</li>
+<li>删除画布节点<strong>不会删除</strong>命运文件夹里的 markdown。</li>
+</ul>
+<h3>轨道</h3>
+<ul>
+<li>只能有<strong>一条正文轨道</strong>。事件轨道可多条，可从裂变「导入列范围」。</li>
+<li>从文件树把当前作品的正文拖进正文轨道、事件拖进事件轨道。左右拖改时间范围，滚轮缩放时间轴。</li>
+<li>轨道卡片最小宽度 120px；已有正文宽度不因导入变窄。父轨宽度 = 子项之和。</li>
+<li>卡片右键：颜色（右侧圆点）、删除。</li>
+<li>正文圆点靠左一格（删除图标左侧），连到事件轨道圆点；重叠即表示剧情面板里的联系。正文默认只连一条，连线右键断开。允许从正文点再拖到其他轨道。</li>
+<li>正文卡片靠近事件 8px 时吸附。</li>
+<li>工具栏分支图标：显示节点与文件连线（圆点对圆点）。另一个开关显示命运节点与事件/正文的包围盒连线。</li>
+<li>锁定缩放：画布与轨道同步缩放、左右平移。</li>
+</ul>
+</section>
+<section class="guide-section" id="sec-steps" data-section="steps"><h2>操作方法与步骤</h2>
+<h3>怎么打开</h3>
+<p>创作面板 Tab「脉络」。工具栏最左选一份因果/命运文件；齿轮里改「命运文件夹」（相对作品根，默认 <code>命运</code>）。</p>
+<h3>添加到因果线</h3>
+<ol class="steps">
+<li>在正文或事件里框选（事件也可不选）→ 右键「添加伏笔」。</li>
+<li>弹窗标题是「添加到因果线」。没有命运文件时可在此新建默认节点。</li>
+<li>选区写成节点上的关联正文/事件（路径 + 偏移 + 原文），不写事件 frontmatter。</li>
+</ol>
+</section>
+<section class="guide-section" id="sec-keyboard" data-section="keyboard"><h2>键盘操作</h2>
+<table class="key-table"><thead><tr><th>按键</th><th>作用</th></tr></thead><tbody><tr><td><kbd class="kbd">Ctrl/Cmd+P</kbd></td><td>打开 Obsidian 命令面板，按名称搜索并执行本页「命令行」里的命令（Obsidian 自带，不是插件默认快捷键）</td></tr><tr><td><kbd class="kbd">Esc</kbd></td><td>取消连线、清除选中边、从子图返回父蓝图</td></tr><tr><td><kbd class="kbd">Ctrl/Cmd+A</kbd></td><td>全选</td></tr><tr><td><kbd class="kbd">Ctrl/Cmd+C</kbd></td><td>复制</td></tr><tr><td><kbd class="kbd">Ctrl/Cmd+=</kbd> <span class="guide-or">或</span> <kbd class="kbd">-</kbd> <span class="guide-or">或</span> <kbd class="kbd">0</kbd></td><td>放大 / 缩小 / 缩放回 1</td></tr><tr><td><kbd class="kbd">方向键</kbd></td><td>轻移选中节点，步长 8 / zoom</td></tr><tr><td><kbd class="kbd">Shift+方向键</kbd></td><td>轻移选中节点，步长 32 / zoom</td></tr><tr><td><kbd class="kbd">Delete</kbd> <span class="guide-or">或</span> <kbd class="kbd">Backspace</kbd></td><td>删除选中</td></tr><tr><td><kbd class="kbd">Enter、Space（桑基图节点）</kbd></td><td>聚焦节点时触发</td></tr></tbody></table>
+<p>所有视图级快捷键在输入框、正文编辑态内都不触发（<code>isTypingTarget</code> 判定）；隐藏或失焦的面板也不响应。下表的「命令行」是另一套入口，两者不要混为一谈。</p>
+</section>
+<section class="guide-section" id="sec-commands" data-section="commands"><h2>命令行</h2>
+<p>在命令面板（<kbd class="kbd">Ctrl/Cmd+P</kbd>）里搜「命令面板里的名称」这一列的中文名即可执行。下表同时给出命令 ID，方便在「设置 → 快捷键」里精确查找、以及在 <code>data.json</code> / 同步配置里核对。</p>
+<table class="cmd-table"><thead><tr><th>命令面板里的名称</th><th>命令 ID</th></tr></thead><tbody><tr><td>打开脉络视图</td><td><code>novel-open-view-thread</code></td></tr></tbody></table>
+<p>以上命令<strong>均没有默认快捷键</strong>：源码里的 <code>addCommand</code> 没有声明 <code>hotkeys</code>，需要快捷键请自行到「设置 → 快捷键」绑定。命令面板本身由 Obsidian 提供，不是插件命令。</p>
+</section>
+<section class="guide-section" id="sec-cautions" data-section="cautions"><h2>注意事项</h2>
+<div class="callout callout-important"><div class="callout-title">Important</div><p>空画布提示里若仍提到「伏笔标签笔记」，以蓝图节点为准。显示关联已改为命运节点的 events/prose。</p></div>
+<h3>通用限制</h3>
+<ul><li>本插件 manifest 声明 <code>isDesktopOnly: true</code>，最低 Obsidian 1.8.7；笔记始终是明文 Markdown，插件只读写 frontmatter 与 <code>System/*.json</code>。</li><li>插件没有为任何命令注册默认快捷键，需要快捷键请到「设置 → 快捷键」按命令名搜索后自行绑定。</li><li>视图级快捷键只在画布 / 视图聚焦且可见时生效，输入框内不触发。</li></ul>
+</section>
+<section class="guide-section" id="sec-extra" data-section="extra"><h2>其他</h2>
+<h3>相关页面</h3>
+<p><a href="home.html">创作主页</a> · <a href="panel.html">创作面板</a> · <a href="graph.html">关系图</a> · <a href="timeline.html">时间线</a> · <a href="timesystem.html">时间体系</a> · <a href="fission.html">裂变</a></p>
+<p><a href="index.html">← 返回指南总览</a> · <a href="../index.html">↑ 返回产品主页</a></p>
+</section>
+<nav class="pager"><a href="timesystem.html"><span class="dir">上一篇</span>时间体系</a><a href="fission.html" style="text-align:right"><span class="dir">下一篇</span>裂变</a></nav>
+<footer class="footer">© <span id="year"></span> Novel-kit · 仅桌面端 · Apache-2.0</footer>
+</main>
+</div>
+<script src="../site/app.js"></script>
+</body>
+</html>
